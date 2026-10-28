@@ -95,6 +95,16 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
  font-style:italic;color:var(--text)}
 .evo-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
 .evo-grid-4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.zoom-showcase{margin:36px 0;padding:30px 32px;background:var(--surface);border:1px solid var(--border);
+ border-left:6px solid var(--blue);box-shadow:0 12px 30px rgba(20,36,26,.05)}
+.zoom-showcase:nth-of-type(even){border-left-color:var(--gold)}
+.zoom-showcase header{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.zoom-macro-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0}
+.zoom-macro-single{margin:18px 0}
+.zoom-pill-bar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 24px}
+.zoom-pill{font:600 12px/1.3 var(--mono);padding:8px 13px;background:var(--surface2);border:1px solid var(--border);
+ border-radius:8px;color:var(--green);text-decoration:none}
+.zoom-pill:hover{border-color:var(--green);background:var(--green-dim)}
 .label.milestone{background:var(--surface2);color:var(--blue);border:1px solid var(--border)}
 .label.deadend{background:rgba(157,86,45,.16);color:var(--rust)}
 .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(10,16,13,.94);color:#eef3ec;
@@ -123,7 +133,7 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
 .lb-foot{padding:12px 22px;background:rgba(18,28,22,.9);border-top:1px solid rgba(255,255,255,.14);
  font:13px/1.5 var(--body);color:#d3ddd2;display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap}
 .lb-caption{max-width:1200px}.lb-hint{font:11px var(--mono);color:#9eb0a2;white-space:nowrap}
-@media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4{grid-template-columns:1fr}
+@media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4,.zoom-macro-grid{grid-template-columns:1fr}
  .lb-stage{padding:10px 12px}.lb-nav{top:auto;bottom:76px;transform:none;height:42px}}
 
       .library{max-width:1450px;margin:auto;padding:28px;min-width:0}

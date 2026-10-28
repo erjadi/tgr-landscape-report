@@ -95,6 +95,16 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
  font-style:italic;color:var(--text)}
 .evo-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
 .evo-grid-4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.zoom-showcase{margin:36px 0;padding:30px 32px;background:var(--surface);border:1px solid var(--border);
+ border-left:6px solid var(--blue);box-shadow:0 12px 30px rgba(20,36,26,.05)}
+.zoom-showcase:nth-of-type(even){border-left-color:var(--gold)}
+.zoom-showcase header{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.zoom-macro-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0}
+.zoom-macro-single{margin:18px 0}
+.zoom-pill-bar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 24px}
+.zoom-pill{font:600 12px/1.3 var(--mono);padding:8px 13px;background:var(--surface2);border:1px solid var(--border);
+ border-radius:8px;color:var(--green);text-decoration:none}
+.zoom-pill:hover{border-color:var(--green);background:var(--green-dim)}
 .label.milestone{background:var(--surface2);color:var(--blue);border:1px solid var(--border)}
 .label.deadend{background:rgba(157,86,45,.16);color:var(--rust)}
 .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(10,16,13,.94);color:#eef3ec;
@@ -123,10 +133,10 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
 .lb-foot{padding:12px 22px;background:rgba(18,28,22,.9);border-top:1px solid rgba(255,255,255,.14);
  font:13px/1.5 var(--body);color:#d3ddd2;display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap}
 .lb-caption{max-width:1200px}.lb-hint{font:11px var(--mono);color:#9eb0a2;white-space:nowrap}
-@media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4{grid-template-columns:1fr}
+@media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4,.zoom-macro-grid{grid-template-columns:1fr}
  .lb-stage{padding:10px 12px}.lb-nav{top:auto;bottom:76px;transform:none;height:42px}}
 </style></head><body><div class="wrap">
-    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#evolution">02 / Evolution history</a><a href="#grounding">03 / Data & corrections</a><a href="#system">04 / Implementation</a><a href="#stills">05 / Fixed-view evidence</a><a href="#motion">06 / Motion stability</a><a href="#performance">07 / Cost</a><a href="#limits">08 / Limits & rejected ideas</a><a href="#reproduce">09 / Reproduce</a><a href="#sources">10 / Sources & manifests</a></nav>
+    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#evolution">02 / Evolution history</a><a href="#vehicle-zooms">02b / Vehicle feature zooms</a><a href="#grounding">03 / Data & corrections</a><a href="#system">04 / Implementation</a><a href="#stills">05 / Fixed-view evidence</a><a href="#motion">06 / Motion stability</a><a href="#performance">07 / Cost</a><a href="#limits">08 / Limits & rejected ideas</a><a href="#reproduce">09 / Reproduce</a><a href="#sources">10 / Sources & manifests</a></nav>
     <main><p><a href="videos.html">Watch or download all 26 original videos</a></p><header class="hero"><span class="eyebrow">Landscape reconstruction / four rally stages / 27 October 2026</span>
     <span class="status">Verified on Spain and deployed</span>
     <h1>From a repeated corridor<br>to a surveyed landscape.</h1>
@@ -163,7 +173,8 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
     shown in this report? Across 73 commits and nine major engineering iterations (Chapters 00&ndash;08), every leap in visual
     fidelity came from diagnosing a concrete physical or mathematical root cause — including several dead-ends that had to be
     openly abandoned. <strong>Click any image below to inspect it in the full-screen lightbox</strong> (use <code>&larr;</code>
-    and <code>&rarr;</code> to step chronologically across the entire evolution).</p>
+    and <code>&rarr;</code> to step chronologically across the entire evolution, or jump straight to the
+    <a href="#vehicle-zooms">Vehicle &amp; Mechanical Feature Zooms</a>).</p>
     <h3>Visual progression across the project lifecycle</h3>
     <div class="evo-strip"><figure><span class="label before">Stage 0 / WebGL</span><img loading="lazy" src="assets/7804125df6e6966c3e18a7a8.jpg" alt="Early browser Three.js WebGL prototype with blocky extruded cars and glowing ribbon road"><figcaption>0. Browser WebGL prototype (98e9116): extruded procedural cars, glowing pink/mint road ribbon, blurred vertex-colored heightmap.</figcaption></figure><figure><span class="label before">Stage I / First Cloud RT</span><img loading="lazy" src="assets/44d390299d1913bdee46e187.jpg" alt="First V710 ray-traced frame with procedural green cone trees"><figcaption>1. First V710 ray-traced frame (609a8f1): remote cloud GPU bring-up, procedural cone trees, first wet-rut ray query.</figcaption></figure><figure><span class="label milestone">Stage II / 260k Grass</span><img loading="lazy" src="assets/0f6c0b712f8fc00ebb9c3a5c.jpg" alt="260,000-strand Cubic-Bezier hair-ribbon grass carpet"><figcaption>2. Hair-system grass revolution (55f525d): 260,000 Cubic-Bezier strands (1.82M verts) with Kajiya-Kay & Marschner backlighting.</figcaption></figure><figure><span class="label deadend">Stage III / Brown Sticks</span><img loading="lazy" src="assets/45f6bdb362801a48fb54789c.jpg" alt="Raw Poly Haven 3D tree import showing bare brown sticks"><figcaption>3. The 'bare brown sticks' crisis: raw 3D tree import lost 97.5% canopy area and mip-bled alpha cards to black.</figcaption></figure><figure><span class="label milestone">Stage IV / 4.1M Forest + 682k Car</span><img loading="lazy" src="assets/503712ce5ee57c91a1d0a215.jpg" alt="4.10M-triangle botanical bundle and 682k-triangle PN-subdivided GR Yaris Rally1"><figcaption>4. 4.10M-tri 8-species botanical bundle (2ff3a0d) + 682k-tri Curved PN-Triangle GR Yaris Rally1 (5b03395) on RTX PRO 6000.</figcaption></figure><figure><span class="label after">Stage V / Surveyed World</span><img loading="lazy" src="assets/8d4f0e8b71961e8bbc9b4254.jpg" alt="Final survey-grounded Elva landscape with metsaserv edge and C2 camera"><figcaption>5. Survey-grounded landscape (edb4b04): Maa-amet/SYKE geodata, 3-tier metsaserv edge, C2 camera, and clip-space stability fix.</figcaption></figure></div>
     <h3>Summary of the engineering chapters (Ch. 00 &rarr; Ch. 08)</h3>
@@ -445,6 +456,127 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
       </ol>
       <p>The rest of this report presents the complete geospatial data pipeline, engineering implementation, 54 matched still pairs,
       and 26 five-second 1080p/30 FPS motion clips proving Chapter 08 in detail.</p>
+    </article>
+    </section>
+    
+    <section id="vehicle-zooms"><span class="eyebrow">02b / Vehicle &amp; mechanical feature deep-dives</span>
+    <h2>Zooming in on the car: wheel blur, 682k mesh &amp; articulated wheels.</h2>
+    <p>Landscape fidelity only works if the hero <code>Toyota GR Yaris Rally1 (#69)</code> and its pack rivals (<code>#33</code>,
+    <code>#00</code>) hold up under close-up broadcast scrutiny. Below we zoom into the three most important vehicle-level
+    engineering breakthroughs — pairing <strong>calibrated 1:1 high-magnification macro crops</strong> with the full
+    <code>1920&times;1080</code> before/after frames. Click any macro card or close-up to inspect it at up to 500% magnification
+    in the full-screen lightbox.</p>
+    <div class="zoom-pill-bar">
+      <a class="zoom-pill" href="#zoom-wheel-blur">01 / 12-Pass 3D Wheel Blur &amp; Kevlar Liners &darr;</a>
+      <a class="zoom-pill" href="#zoom-mesh-improvement">02 / 682k PN-Subdivided Mesh, 8K PBR &amp; Rival Fix &darr;</a>
+      <a class="zoom-pill" href="#zoom-articulated-wheels">03 / 5-Part Articulated Wheels, Steering &amp; Braking Dive &darr;</a>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Feature Subsystem</th><th>Before (Diagnostic Failure Mode)</th><th>After (Engineered 3D Solution)</th><th>Commits / RCAs</th></tr></thead><tbody><tr><td>01 / Wheel Blur & Wheel-Well Enclosure</td><td>120 px screen-space UV ellipse (carEllip) smeared car bodywork horizontally while 3D wheel geometry rendered in 1 static pass (frozen spokes at 142 km/h) inside hollow open wheel arches.</td><td>Removed screen-space carEllip UV smear; added 12-pass 3D rotational shutter accumulation (N_WHEEL_BLUR = 12 over 180 deg shutter angle), radial contact-patch sidewall bulge, and 3D Kevlar inner fender liners.</td><td>69d7330, 13cfd20 (RCA-1, RCA-3, RCA-4)</td></tr><tr><td>02 / Mesh Subdivision, Native 8K PBR & Rival Integrity</td><td>231,098-tri base mesh had polygonal wheel arches and a downscaled 4096x4096 atlas; rival cars (#33, #00) used f_tris[::2] 50% triangle deletion, turning bodywork into 'Swiss-cheese' holes.</td><td>Edge-welded Curved PN-Triangle subdivision to 682,182 triangles + native 8192x8192 sRGB Albedo + 4096x4096 Normal & ORM atlases with dual-lobe clearcoat; restored full 682k watertight mesh on all rival cars.</td><td>5b03395, 69d7330 (RCA-2)</td></tr><tr><td>03 / 5-Part Articulated Wheels, Steering & Braking Dive</td><td>Monolithic static GLB mesh could not spin or steer wheels independently; steering angle was multiplied by 0.075 twice (0.3 deg max lock); chassis lacked braking pitch and arch compression.</td><td>Connected-component 5-part topological split (body + FL/FR/RL/RR wheels) keeping struts on chassis; true +/-25 deg Ackermann kingpin yaw + cumulative axle spin integral(v/r dt) + telemetry braking pitch/dive.</td><td>ab66786, 69d7330, 13cfd20</td></tr></tbody></table></div>
+
+    <article class="zoom-showcase" id="zoom-wheel-blur">
+      <header>
+        <div class="evo-meta"><span>Feature Zoom 01</span><span>Commits 69d7330 &rarr; 13cfd20</span><span>RCA-1 + RCA-3 + RCA-4 &middot; 12-Pass 3D Shutter Accumulation</span></div>
+        <h3>12-Pass 3D Rotational Wheel Blur, Tire Contact Squish &amp; Enclosed Kevlar Wheel Liners</h3>
+      </header>
+      <p>In earlier builds, high-speed motion blur was approximated in the post-process shader using a hardcoded
+      <code>120 px</code> screen-space UV ellipse (<code>carEllip</code>, <code>RCA-1</code>), while the 3D wheel geometry itself was
+      drawn in a single static pass (<code>0</code> rotational shutter samples). At <code>142 km/h</code> on <code>SS2/SS5 Elva</code>,
+      this produced two simultaneous visual contradictions:</p>
+      <ul>
+        <li><strong>Smudged Bodywork + Frozen Spokes:</strong> The screen-space UV ellipse smeared the stationary
+        <code>Panasonic</code> rear wing, <code>#69</code> door number, and <code>TOYOTA</code> tailgate horizontally across 120 pixels,
+        yet the white 12-spoke OZ Racing gravel rims remained completely frozen as if parked.</li>
+        <li><strong>Hollow Wheel-Arch Sky Leaks (<code>RCA-4</code>) &amp; Rigid Tires (<code>RCA-3</code>):</strong> Because the raw car
+        shell lacked inner fender wells, bright sky and background grass leaked straight through the gap behind the front tires, and
+        the tires floated rigidly without radial load deflection at the gravel contact patch.</li>
+      </ul>
+      <p><strong>The Fix:</strong> We removed <code>carEllip</code> screen-space smearing from the car body and implemented true
+      <strong>12-pass 3D rotational shutter accumulation</strong> (<code>N_WHEEL_BLUR = 12</code> sub-frame rotor steps distributed
+      across a <code>180&deg;</code> shutter angle &Delta;&theta; = &omega; &middot; &Delta;t<sub>shutter</sub> around each wheel&rsquo;s
+      3D hub axis), added radial contact-patch sidewall bulge (<code>RCA-3</code>), and sealed all four wheel wells with 3D matte
+      Kevlar inner fender liners (<code>RCA-4</code>).</p>
+      <div class="zoom-macro-grid">
+        <figure><span class="label after">Macro Zoom 01a / Rear 3/4 Wheel & Wing Crop</span><img loading="lazy" src="assets/9dae183d398cccd7c16ca4e6.jpg" alt="High-magnification 1:1 macro zoom comparing 120 px screen-space UV smear and frozen spokes vs crisp bodywork and 12-pass 3D rotational wheel blur"><figcaption>zoom_wheel_blur_macro.jpg: 1:1 macro crop on Rear 3/4 view (SS2 Elva, 142 km/h). Left: 120 px carEllip UV smear blurs the #69 tailgate while wheel spokes stay frozen. Right: Razor-sharp bodywork + 12-pass 3D rotational spoke blur + tire contact squish.</figcaption></figure>
+        <figure><span class="label after">Macro Zoom 01b / Front 3/4 Arch & Spoke Crop</span><img loading="lazy" src="assets/a31bcd45d8fe0cbc6bc96b74.jpg" alt="High-magnification 1:1 macro zoom comparing hollow wheel arch and static spokes vs enclosed 3D Kevlar liner and 12-pass spoke blur"><figcaption>zoom_wheel_liner_front34_macro.jpg: 1:1 macro crop on Front 3/4 view (SS2 Elva, 141 km/h). Left: Hollow wheel well leaks background behind static spokes. Right: Enclosed 3D Kevlar inner fender liner + 12-pass 3D rotational blur.</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><span class="label before">Full Frame Before / Rear 3/4 Close-Up</span><img loading="lazy" src="assets/b8e0ac75fd0c58e1f5bf532f.jpg" alt="Full 1920x1080 Rear 3/4 close-up before fixing carEllip UV smear and frozen wheels"><figcaption>car_closeup_rear34_before.jpg: Full 1080p Rear 3/4 close-up before RCA-1/3/4 — 120 px horizontal UV smear across the car body and frozen white spokes.</figcaption></figure>
+        <figure><span class="label after">Full Frame After / Rear 3/4 Close-Up</span><img loading="lazy" src="assets/040db97b58e7608a029bfe37.jpg" alt="Full 1920x1080 Rear 3/4 close-up after 12-pass 3D wheel shutter blur and carEllip removal"><figcaption>car_closeup_rear34_after.jpg: Full 1080p Rear 3/4 close-up after RCA-1/3/4 — crisp Panasonic/TGR livery, 12-pass 3D spinning rims, and grounded tire contact.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="zoom-showcase" id="zoom-mesh-improvement">
+      <header>
+        <div class="evo-meta"><span>Feature Zoom 02</span><span>Commits 5b03395 &amp; 69d7330</span><span>682,182 Curved PN-Triangles + Native 8K PBR + RCA-2 Rival Mesh Fix</span></div>
+        <h3>Mesh &amp; Material Upgrade: 231k Faceted &amp; 50%-Decimated Rivals &rarr; 682,182 Curved PN-Triangles &amp; Native 8K PBR</h3>
+      </header>
+      <p>Close-up cameras exposed two separate geometric bottlenecks — one on the hero car and a catastrophic decimation bug on
+      the pack rival cars:</p>
+      <ul>
+        <li><strong>Hero Mesh Subdivision &amp; Native 8K PBR Pipeline (<code>5b03395</code>):</strong> The original <code>231,098</code>-triangle
+        GLB exhibited polygonal, faceted silhouettes along the flared carbon wheel arches and front splitter, while its diffuse
+        texture had been downscaled to <code>4096&times;4096</code>, softening thin sponsor scripts (<code>DMG MORI</code>, <code>CCI</code>,
+        <code>DENSO</code>, <code>Pirelli</code>). We implemented crack-free edge-welded <strong>Curved PN-Triangle subdivision to
+        <code>682,182</code> triangles</strong> and bound the native 1:1 <code>8192&times;8192</code> sRGB Albedo atlas alongside
+        <code>4096&times;4096</code> Tangent-Space Normal and <code>4096&times;4096</code> Packed ORM (<code>Occlusion / Roughness / Metallic</code>)
+        maps with dual-lobe carbon-weave clearcoat and micro-flake metallic paint.</li>
+        <li><strong>Eliminating the 50% Rival Car &ldquo;Swiss-Cheese&rdquo; Decimation (<code>RCA-2</code>, <code>69d7330</code>):</strong>
+        In pack-chase views, rival cars <code>#33 Evans</code> and <code>#00 A100 Optimal</code> had been rendered with
+        <code>f_tris[::2]</code> — slicing out every second triangle (50% polygon deletion) as a crude optimization. That left both
+        rival cars looking like shattered polygon soup with missing doors, roof holes, and broken bumpers (`car_pack_decimation_before.jpg`).
+        Restoring the full watertight <code>682,182</code>-triangle mesh on all three cars eliminated every gap.</li>
+      </ul>
+      <div class="zoom-macro-grid">
+        <figure><span class="label after">Macro Zoom 02a / 231k + 4K vs 682k PN + Native 8K</span><img loading="lazy" src="assets/5249e9cd712161c56efd1d37.jpg" alt="High-magnification 1:1 macro zoom comparing 231k faceted mesh and 4K texture vs 682,182 Curved PN-Triangles and native 8K PBR livery"><figcaption>zoom_mesh_improvement_macro.jpg: 1:1 macro crop on Front 3/4 view. Left: 231,098-tri mesh with faceted arches and 4K diffuse. Right: 682,182 Curved PN-Triangles + native 8192x8192 Albedo + 4096x4096 Normal/ORM.</figcaption></figure>
+        <figure><span class="label after">Macro Zoom 02b / Rival Car 50% Decimation Fix (RCA-2)</span><img loading="lazy" src="assets/1a82bdb005a09a79b731ecf3.jpg" alt="High-magnification 1:1 macro zoom comparing rival cars with f_tris[::2] 50% triangle deletion vs watertight 682k mesh"><figcaption>zoom_rival_decimation_macro.jpg: 1:1 macro crop on pack rivals (#33 and #00). Left: f_tris[::2] deleted 50% of triangles, leaving 'Swiss-cheese' holes across doors and roofs. Right: Full watertight 682k mesh.</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><span class="label before">Full Frame Before / Front 3/4 Close-Up</span><img loading="lazy" src="assets/778e0d93db3739f236bc463d.jpg" alt="Full 1920x1080 Front 3/4 close-up before RCA-1..4"><figcaption>car_closeup_front34_before.jpg: Full 1080p Front 3/4 close-up before fixing screen-space smear, hollow wheel liners, and static spokes.</figcaption></figure>
+        <figure><span class="label after">Full Frame After / Front 3/4 Close-Up</span><img loading="lazy" src="assets/af26a0f432f7ada7fffc411c.jpg" alt="Full 1920x1080 Front 3/4 close-up with 682k PN-Triangles, native 8K livery, Kevlar liners, and 12-pass wheel blur"><figcaption>car_closeup_front34_after.jpg: Full 1080p Front 3/4 close-up with 682,182 Curved PN-Triangles, native 8K PBR livery, Kevlar wheel liners, and 12-pass spoke blur.</figcaption></figure>
+      </div>
+      <div class="pair" style="margin-top:16px">
+        <figure><span class="label deadend">Full Frame Before / Pack Chase (f_tris[::2] Bug)</span><img loading="lazy" src="assets/2a3d18349741f7f6eaefc9e4.jpg" alt="Full 1920x1080 pack chase showing shattered rival cars with 50% missing triangles"><figcaption>car_pack_decimation_before.jpg: Pack chase at t=6.2s on SS2 Elva before RCA-2 — rival cars #33 and #00 have 50% of their triangles deleted via f_tris[::2].</figcaption></figure>
+        <figure><span class="label after">Full Frame After / Pack Chase (Watertight 682k Pack)</span><img loading="lazy" src="assets/43e5afb45415ab473ed83b96.jpg" alt="Full 1920x1080 pack chase with watertight 682k meshes on all three cars"><figcaption>car_pack_decimation_after.jpg: Matched pack chase after restoring the full watertight 682k-triangle mesh and removing carEllip smear across all three cars.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="zoom-showcase" id="zoom-articulated-wheels">
+      <header>
+        <div class="evo-meta"><span>Feature Zoom 03</span><span>Commits ab66786, 69d7330, 13cfd20</span><span>5-Part Connected-Component Split + Ackermann Yaw + Braking Pitch</span></div>
+        <h3>Articulated 5-Part Wheels: Topological Mesh Separation, Ackermann Steering &amp; Braking Dive Kinematics</h3>
+      </header>
+      <p>The raw <code>Toyota GR Yaris Rally1</code> asset was delivered as a single monolithic static mesh — the wheels, tires, brake
+      calipers, coilover struts, and chassis were all fused into one vertex buffer. To make the car respond physically to 10 Hz / 30 Hz
+      WRC telemetry, we engineered a three-stage mechanical articulation pipeline:</p>
+      <ol>
+        <li><strong>5-Part Topological Connected-Component Separation:</strong> Using <code>scipy.sparse.csgraph.connected_components</code>
+        combined with axle spatial bounding volumes (<code>z_front = +1.23 m</code>, <code>z_rear = -1.32 m</code>,
+        <code>y_axle = 0.33 m</code>, <code>r_wheel = 0.35 m</code>), we partitioned the mesh into <strong>five independent articulated
+        groups</strong> (<code>body</code> + <code>FL</code>, <code>FR</code>, <code>RL</code>, <code>RR</code> wheel/tire/rim assemblies)
+        while keeping the upper orange/gold coilover suspension struts rigidly attached to the body shell so they never spin with the
+        wheel (`yaris_5part_topological_split.jpg`).</li>
+        <li><strong>True Ackermann Kingpin Steering &amp; Cumulative Axle Spin (<code>ab66786</code>):</strong> Early builds multiplied
+        steering wheel telemetry by <code>0.075</code> during ingestion and <em>again</em> by <code>0.075</code> inside
+        <code>render_frame</code> (<code>0.075 &times; 0.075 = 0.005625</code>), clamping a 25&deg; cornering lock down to an invisible
+        <code>0.3&deg;</code>! Fixing the double attenuation restored full <code>&plusmn;25&deg;</code> kingpin yaw articulation
+        (<code>Y</code> axis) composed with cumulative angular wheel integration &theta;(t) = &int;(v / r<sub>tire</sub>) dt around each
+        hub&rsquo;s local <code>X</code> axis (`zoom_articulated_wheels_macro.jpg`).</li>
+        <li><strong>Dynamic Braking Pitch, Arch Compression &amp; Steered Rotor Blur (<code>69d7330</code>, <code>13cfd20</code>):</strong>
+        Under heavy braking (<code>48%</code> brake pressure at <code>58 km/h</code> entering the Elva chicane at <code>t = 22.80 s</code>),
+        longitudinal deceleration drives forward chassis pitch/dive, compresses the front wheel arch down over the tire, and composes
+        kingpin steering lock with 12-pass 3D rotational blur (`zoom_braking_dive_macro.jpg`).</li>
+      </ol>
+      <div class="zoom-macro-grid">
+        <figure><span class="label milestone">Diagnostic 03a / 5-Part Connected-Component Mesh Split</span><img loading="lazy" src="assets/b8dc50cccb1059ed77f99eb2.jpg" alt="4-view orthographic diagnostic showing the 5-part topological separation of the GR Yaris Rally1 into body and FL/FR/RL/RR wheel assemblies"><figcaption>yaris_5part_topological_split.jpg: 4-view orthographic diagnostic of the connected-component topological split — separating FL (red), FR (green), RL (blue), and RR (gold) wheel assemblies around axle centers while retaining upper suspension struts on the chassis.</figcaption></figure>
+        <figure><span class="label after">Macro Zoom 03b / Consecutive-Frame Axle Spin & Steering Yaw</span><img loading="lazy" src="assets/65d8b99ea4667029c788da0c.jpg" alt="High-magnification 1:1 macro zoom of consecutive frames t and t+dt proving independent 3D axle rotation and Ackermann steering yaw"><figcaption>zoom_articulated_wheels_macro.jpg: Consecutive frames t vs t + dt zoomed into the front-left wheel assembly — verifying cumulative 3D hub rotation (w*dt) composed with kingpin steering yaw while the bodywork remains rock-solid.</figcaption></figure>
+      </div>
+      <div class="zoom-macro-single">
+        <figure><span class="label after">Macro Zoom 03c / Side-Profile Braking Dive & Steered 3D Rotor Blur (48% Brake)</span><img loading="lazy" src="assets/fffd18685bfae19af177f55d.jpg" alt="High-magnification 1:1 macro zoom comparing side profile under 48% braking before and after suspension dive and 12-pass steered wheel blur"><figcaption>zoom_braking_dive_macro.jpg: 1:1 macro crop under 48% braking at 58 km/h (SS2 Elva chicane, t=22.80s). Left: carEllip horizontal smear + frozen spokes. Right: Forward braking pitch/dive, compressed front arch, Ackermann yaw, and 12-pass 3D spoke blur.</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><span class="label before">Full Frame Before / Side Profile Braking (t=22.80s)</span><img loading="lazy" src="assets/b78bf3dc48f72943dda9872a.jpg" alt="Full 1920x1080 side profile under 48% braking before fixing carEllip smear and static wheels"><figcaption>car_closeup_side_braking_before.jpg: Full 1080p side profile at t=22.80s (58 km/h, 48% brake) before RCA-1/3/4 — smeared decals and static wheels.</figcaption></figure>
+        <figure><span class="label after">Full Frame After / Side Profile Braking (t=22.80s)</span><img loading="lazy" src="assets/a062fc16afa753b0dcbd0ab8.jpg" alt="Full 1920x1080 side profile under 48% braking showing forward suspension dive, steered front wheel, and 12-pass 3D wheel blur"><figcaption>car_closeup_side_braking_after.jpg: Full 1080p side profile at t=22.80s after RCA-1/3/4 — crisp #69 livery, forward braking pitch, enclosed arches, and 12-pass 3D rotational blur.</figcaption></figure>
+      </div>
     </article>
     </section>
     <section id="grounding"><span class="eyebrow">03 / Grounding & corrections</span><h2>Use the actual products, not their preview colours.</h2>
@@ -2288,7 +2420,7 @@ function playPair(id='wind-pair'){
  function describeImage(img){
   const fig=img.closest('figure');
   const badge=fig?fig.querySelector('.label,.eyebrow'):null;
-  const card=img.closest('.comparison,.evo-chapter,.ve-card,section');
+  const card=img.closest('.comparison,.evo-chapter,.zoom-showcase,.ve-card,section');
   const heading=card?card.querySelector('h3,h2'):null;
   const cap=fig?fig.querySelector('figcaption'):null;
   const link=cap?cap.querySelector('a[href]'):null;
