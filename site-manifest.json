@@ -984,6 +984,12 @@
       "content_type": "image/png",
       "packaged": false
     },
+    "assets/7804125df6e6966c3e18a7a8.jpg": {
+      "bytes": 108217,
+      "sha256": "7804125df6e6966c3e18a7a8acf92904794cd9dd98b9c6e26245ba505d5c0d8a",
+      "content_type": "image/jpeg",
+      "packaged": true
+    },
     "assets/44d390299d1913bdee46e187.jpg": {
       "bytes": 219234,
       "sha256": "44d390299d1913bdee46e187950d9bf823988334430a9bb1db3d1bd1c0b1f262",
@@ -1002,12 +1008,6 @@
       "content_type": "image/jpeg",
       "packaged": true
     },
-    "assets/708f4dcb9024fc843661b873.jpg": {
-      "bytes": 321468,
-      "sha256": "708f4dcb9024fc843661b8732f08b3d26e3112aadc336e76cda05c37bfbb8bbd",
-      "content_type": "image/jpeg",
-      "packaged": true
-    },
     "assets/503712ce5ee57c91a1d0a215.jpg": {
       "bytes": 252541,
       "sha256": "503712ce5ee57c91a1d0a215827e39d18226451feaca84a3ac448889a7fb6469",
@@ -1017,6 +1017,18 @@
     "assets/8d4f0e8b71961e8bbc9b4254.jpg": {
       "bytes": 321293,
       "sha256": "8d4f0e8b71961e8bbc9b4254deaa5ffa2e3d0534d9003d963e7fa7670990da9d",
+      "content_type": "image/jpeg",
+      "packaged": true
+    },
+    "assets/d284e2c40626d06e6334ecf2.jpg": {
+      "bytes": 368694,
+      "sha256": "d284e2c40626d06e6334ecf2f426014330c4687b91ad700200d7005c924acd21",
+      "content_type": "image/jpeg",
+      "packaged": true
+    },
+    "assets/1c7b8c6446a34a34cc0323bd.jpg": {
+      "bytes": 224072,
+      "sha256": "1c7b8c6446a34a34cc0323bd8029c086968d8ff0f62c1029db1ade5be0c45fd3",
       "content_type": "image/jpeg",
       "packaged": true
     },
@@ -1077,6 +1089,12 @@
     "assets/0d3edbe2e85d5a7850dca523.jpg": {
       "bytes": 322176,
       "sha256": "0d3edbe2e85d5a7850dca5237a39e4cef4fdc1945824b3b4114855f4dbc8ff2c",
+      "content_type": "image/jpeg",
+      "packaged": true
+    },
+    "assets/708f4dcb9024fc843661b873.jpg": {
+      "bytes": 321468,
+      "sha256": "708f4dcb9024fc843661b8732f08b3d26e3112aadc336e76cda05c37bfbb8bbd",
       "content_type": "image/jpeg",
       "packaged": true
     },
@@ -2023,8 +2041,8 @@
       "packaged": true
     },
     "index.html": {
-      "bytes": 207481,
-      "sha256": "bde1ad5669d75d7b103274c2f7a56b15100857dc737ed204a3cc048496abdcb7",
+      "bytes": 210902,
+      "sha256": "a4ec78b3eceffe2bc99d6d13bd3c3275ea5ca435e3781c6ead0efa00a2c1256e",
       "content_type": "text/html",
       "packaged": true
     },
@@ -2047,11 +2065,11 @@
       "packaged": true
     }
   },
-  "bytes": 1400758035,
-  "packaged_bytes": 48762334,
+  "bytes": 1401462439,
+  "packaged_bytes": 49466738,
   "original_videos": 26,
   "original_stills": 112,
-  "validated_local_references": 223,
+  "validated_local_references": 225,
   "media_base_url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1",
-  "source_report_sha256": "feca878643bbd72acb6abb1c130affeb9dcf01784a5da0bc42ecb120e2140a81"
+  "source_report_sha256": "7891420e46cd230647bf267106c4bc88198e451656c085b6f9a24611e0ae6f4c"
 }
