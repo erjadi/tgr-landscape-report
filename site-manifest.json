@@ -2041,14 +2041,14 @@
       "packaged": true
     },
     "index.html": {
-      "bytes": 210902,
-      "sha256": "a4ec78b3eceffe2bc99d6d13bd3c3275ea5ca435e3781c6ead0efa00a2c1256e",
+      "bytes": 211012,
+      "sha256": "16f0fdaeb65705a6b5d73bdf05415e39f8dcd7945424c2f2e894e1e8a68df9e8",
       "content_type": "text/html",
       "packaged": true
     },
     "videos.html": {
-      "bytes": 34816,
-      "sha256": "ad628eca3d83c1898015f92ac684e2f44cf16cb08301e8353f34562fa3dff625",
+      "bytes": 34926,
+      "sha256": "3def4b5738155d4a3098acb4164de5396703d11cbc993b29c05859acd8b9e356",
       "content_type": "text/html",
       "packaged": true
     },
@@ -2065,11 +2065,11 @@
       "packaged": true
     }
   },
-  "bytes": 1401462439,
-  "packaged_bytes": 49466738,
+  "bytes": 1401462659,
+  "packaged_bytes": 49466958,
   "original_videos": 26,
   "original_stills": 112,
   "validated_local_references": 225,
   "media_base_url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1",
-  "source_report_sha256": "7891420e46cd230647bf267106c4bc88198e451656c085b6f9a24611e0ae6f4c"
+  "source_report_sha256": "bee6e71a49e9856e0efc4f7cc6ff40f75519f58840fd3c09beb7ac556ea06d38"
 }

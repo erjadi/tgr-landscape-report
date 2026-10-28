@@ -18,7 +18,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}
 body{margin:0;color:var(--text);background:var(--bg);font:16px/1.65 var(--body);
  background-image:linear-gradient(130deg,var(--green-dim),transparent 30%)}
-a{color:var(--green);text-underline-offset:3px}img,video{display:block;width:100%;height:auto}
+a{color:var(--green);text-underline-offset:3px}img,video{display:block;width:100%;height:auto;border-radius:10px}
 button{font:600 14px var(--body);padding:10px 18px;border:1px solid var(--border);color:var(--text);
  background:var(--surface2);cursor:pointer}button:hover{border-color:var(--green)}
 .wrap{max-width:1600px;margin:auto;padding:36px 34px 100px;display:grid;grid-template-columns:180px minmax(0,1fr);gap:38px}
@@ -47,7 +47,7 @@ h2{font:42px var(--head)}h3{font-size:22px}p{margin:0 0 18px}li{margin:7px 0}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.pair>*{min-width:0}
 .comparison{margin:34px 0 48px;padding-bottom:24px;border-bottom:1px solid var(--border)}
 .comparison header p{max-width:1000px;color:var(--dim);font-size:15px}
-figure{margin:0;min-width:0}figure img,video{background:#15201b;border:1px solid var(--border)}
+figure{margin:0;min-width:0}figure img,video{background:#15201b;border:1px solid var(--border);border-radius:10px;overflow:hidden}
 figcaption{font-size:12px;color:var(--dim);padding:8px 0 0;overflow-wrap:anywhere}
 .label{display:inline-block;font:11px var(--mono);text-transform:uppercase;letter-spacing:1px;padding:5px 9px;margin-bottom:7px}
 .label.before{background:var(--gold-dim);color:var(--gold)}.label.after{background:var(--green-dim);color:var(--green)}
@@ -81,10 +81,10 @@ figure img{cursor:zoom-in;transition:transform .16s ease,box-shadow .16s ease,bo
 figure img:hover,figure img:focus-visible{border-color:var(--green);box-shadow:0 10px 26px rgba(20,36,26,.18)}
 .zoom-badge{position:absolute;right:10px;top:10px;padding:4px 8px;font:600 10px/1.2 var(--mono);
  letter-spacing:.8px;text-transform:uppercase;color:#f5f9f4;background:rgba(15,24,19,.78);
- border:1px solid rgba(255,255,255,.22);pointer-events:none;opacity:0;transition:opacity .15s ease}
+ border:1px solid rgba(255,255,255,.22);border-radius:6px;pointer-events:none;opacity:0;transition:opacity .15s ease}
 figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
 .evo-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0 34px}
-.evo-strip figure{background:var(--surface);padding:12px;border:1px solid var(--border)}
+.evo-strip figure{background:var(--surface);padding:12px;border:1px solid var(--border);border-radius:12px}
 .evo-chapter{margin:36px 0;padding:28px 30px;background:var(--surface);border:1px solid var(--border);
  border-left:5px solid var(--green)}
 .evo-chapter:nth-of-type(even){border-left-color:var(--gold)}
@@ -113,7 +113,7 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
  overflow:hidden;user-select:none;padding:16px 64px}
 .lb-stage.zoomed{cursor:grab}.lb-stage.dragging{cursor:grabbing}
 .lb-img{max-width:95vw;max-height:80vh;width:auto;height:auto;object-fit:contain;
- border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 64px rgba(0,0,0,.65);
+ border:1px solid rgba(255,255,255,.18);border-radius:10px;box-shadow:0 24px 64px rgba(0,0,0,.65);
  transform-origin:center center;transition:transform .08s ease-out}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:64px;
  font:600 22px/1 var(--mono);color:#eef3ec;background:rgba(18,28,22,.78);
