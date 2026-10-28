@@ -1,0 +1,1126 @@
+{
+  "status": "verified",
+  "stills": 112,
+  "matched_still_pairs": 54,
+  "clips": 26,
+  "output_motion_frames": 3900,
+  "method": "Individually rendered simulation timestamps, offline 30 FPS playback; not live throughput.",
+  "videos": [
+    {
+      "case": "ruuhimaki_motion_chase",
+      "version": "before",
+      "stage": "ruuhimaki",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_chase.mp4",
+      "poster": "posters/before-ruuhimaki_motion_chase.jpg",
+      "bytes": 41756080,
+      "sha256": "a9fe72e56a5dd4071706c4b1fe857cccaab04c31331aa90a0844aefb3dc9c19f",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "ruuhimaki_motion_heli",
+      "version": "before",
+      "stage": "ruuhimaki",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_heli.mp4",
+      "poster": "posters/before-ruuhimaki_motion_heli.jpg",
+      "bytes": 35907346,
+      "sha256": "643f683e0429d644c7393f01ca401eef81f4d731b2d38f9ee5095b76fac28c79",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_motion_chase",
+      "version": "before",
+      "stage": "neeruti",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_chase.mp4",
+      "poster": "posters/before-neeruti_motion_chase.jpg",
+      "bytes": 36052675,
+      "sha256": "3e03268e3e1f3830bd4dfffbf04e00da93a5fea19dbd71af168952d9f22fa584",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_motion_heli",
+      "version": "before",
+      "stage": "neeruti",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_heli.mp4",
+      "poster": "posters/before-neeruti_motion_heli.jpg",
+      "bytes": 38001418,
+      "sha256": "9e3dd613c27cb38ca527b69a71ac605790486b5055fce649ff4b7a133063aa4c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_motion_chase",
+      "version": "before",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_chase.mp4",
+      "poster": "posters/before-elva_motion_chase.jpg",
+      "bytes": 39608498,
+      "sha256": "15eec11ef56375ff45e2688103ec9d223ca263c19fd38a789584cc9813765042",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_motion_heli",
+      "version": "before",
+      "stage": "elva",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_heli.mp4",
+      "poster": "posters/before-elva_motion_heli.jpg",
+      "bytes": 39587695,
+      "sha256": "a69bf0475b75ef50bbd490bca0405ec7072598d17c247724d640386ca20353bd",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "otepaa_motion_chase",
+      "version": "before",
+      "stage": "otepaa",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_chase.mp4",
+      "poster": "posters/before-otepaa_motion_chase.jpg",
+      "bytes": 42495792,
+      "sha256": "30af4a4c06a96f0efd11e354c750762ee0b1a76e037709f2b4f47644a84f1a5c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "otepaa_motion_heli",
+      "version": "before",
+      "stage": "otepaa",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_heli.mp4",
+      "poster": "posters/before-otepaa_motion_heli.jpg",
+      "bytes": 32844680,
+      "sha256": "b1ecbfdd027af8e0ef0b6414434595983432c5e9469137eafc2857cdfc749c0a",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_near_motion",
+      "version": "before",
+      "stage": "neeruti",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_near_motion.mp4",
+      "poster": "posters/before-neeruti_near_motion.jpg",
+      "bytes": 36165267,
+      "sha256": "9bcff015ad15ec1e312b0119838bc98b192018d592690f49d432c601dbc16bb6",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_near_motion",
+      "version": "before",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_near_motion.mp4",
+      "poster": "posters/before-elva_near_motion.jpg",
+      "bytes": 36531380,
+      "sha256": "9f67cff463bc6abbc8a847dbe8bd57a126d9732da2f6179e5e85e6c1591af70b",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_wind_stationary",
+      "version": "before",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": true,
+      "camera_reference": "native baseline",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_wind_stationary.mp4",
+      "poster": "posters/before-elva_wind_stationary.jpg",
+      "bytes": 14961788,
+      "sha256": "7b35a023cdaf956e63207d463e1266195593ecc13c2f5998802504618ee77878",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "ruuhimaki_motion_chase",
+      "version": "after",
+      "stage": "ruuhimaki",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_chase.mp4",
+      "poster": "posters/after-ruuhimaki_motion_chase.jpg",
+      "bytes": 31021041,
+      "sha256": "62221ce949b5f792619a95f0f9b5590d5233c6e4fec7e4eb2b8cc67b45a1b4cc",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "ruuhimaki_motion_heli",
+      "version": "after",
+      "stage": "ruuhimaki",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_heli.mp4",
+      "poster": "posters/after-ruuhimaki_motion_heli.jpg",
+      "bytes": 24072056,
+      "sha256": "c9c748da013b669a75b2805bb20eaa1c37667d735c4344141b12a3101734280c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_motion_chase",
+      "version": "after",
+      "stage": "neeruti",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_chase.mp4",
+      "poster": "posters/after-neeruti_motion_chase.jpg",
+      "bytes": 27660362,
+      "sha256": "ca86ec8994b490add757a1ee8014d26669fb0f94dcc9c752a31a7b8787bef955",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_motion_heli",
+      "version": "after",
+      "stage": "neeruti",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_heli.mp4",
+      "poster": "posters/after-neeruti_motion_heli.jpg",
+      "bytes": 29309072,
+      "sha256": "f89211794a4e689b9dfb28d63c73f5237a3a7e35ab7092e059e0e997c39d8f49",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_motion_chase",
+      "version": "after",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_chase.mp4",
+      "poster": "posters/after-elva_motion_chase.jpg",
+      "bytes": 33534985,
+      "sha256": "38c666eceb2d773582def195f3103f2aaa1976952513ae5a114daeab536c468c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_motion_heli",
+      "version": "after",
+      "stage": "elva",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_heli.mp4",
+      "poster": "posters/after-elva_motion_heli.jpg",
+      "bytes": 30667375,
+      "sha256": "209bd7ee10dd682c7e5918cd39371aeb8c91a8721e4e427f2bed1dfefd2fbd50",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "otepaa_motion_chase",
+      "version": "after",
+      "stage": "otepaa",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_chase.mp4",
+      "poster": "posters/after-otepaa_motion_chase.jpg",
+      "bytes": 32066417,
+      "sha256": "0a00c86276b46d957e7a6af8962c4b9993029bbf1744d62a76bfa66876d22329",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "otepaa_motion_heli",
+      "version": "after",
+      "stage": "otepaa",
+      "mode": "heli",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_heli.mp4",
+      "poster": "posters/after-otepaa_motion_heli.jpg",
+      "bytes": 22037908,
+      "sha256": "f3b69d15d2e5f87155f185e2269be6f81eb7c1d09e3456a025d72335e2a0683c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_near_motion",
+      "version": "after",
+      "stage": "neeruti",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_near_motion.mp4",
+      "poster": "posters/after-neeruti_near_motion.jpg",
+      "bytes": 24227774,
+      "sha256": "d13827d9bb00a31dad6a156809adfbe07a04422b673acad848a3ab68239ae577",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_near_motion",
+      "version": "after",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "native camera path",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_near_motion.mp4",
+      "poster": "posters/after-elva_near_motion.jpg",
+      "bytes": 28129571,
+      "sha256": "f1cd75d64117c37a8f7924a4bf1716d876bcc15d66c8540ec32f04e5738837b1",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_wind_stationary",
+      "version": "after",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": true,
+      "camera_reference": "matched baseline poses",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_wind_stationary.mp4",
+      "poster": "posters/after-elva_wind_stationary.jpg",
+      "bytes": 13273438,
+      "sha256": "d38b70bcef227e6cc12a91d31ba38a80499dd75a3acd890e348e1ff6deed7524",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "ruuhimaki_motion_chase",
+      "version": "matched-motion",
+      "stage": "ruuhimaki",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "matched baseline poses",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__ruuhimaki_motion_chase.mp4",
+      "poster": "posters/matched-motion-ruuhimaki_motion_chase.jpg",
+      "bytes": 38475053,
+      "sha256": "673696622bd6e726d22662b16ed861123b71a13e935ff04091350a585cc2102e",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "neeruti_motion_chase",
+      "version": "matched-motion",
+      "stage": "neeruti",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "matched baseline poses",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__neeruti_motion_chase.mp4",
+      "poster": "posters/matched-motion-neeruti_motion_chase.jpg",
+      "bytes": 29979994,
+      "sha256": "2a8851a3c0d67f01a5857254e53426b99ab44d4919e31c056b4f4fe3bcc7187c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "elva_motion_chase",
+      "version": "matched-motion",
+      "stage": "elva",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "matched baseline poses",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__elva_motion_chase.mp4",
+      "poster": "posters/matched-motion-elva_motion_chase.jpg",
+      "bytes": 36656397,
+      "sha256": "e3b8dfbbde545afb355694091ad46a17f26549f5bfbbbc460cadafee50ab494b",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    },
+    {
+      "case": "otepaa_motion_chase",
+      "version": "matched-motion",
+      "stage": "otepaa",
+      "mode": "chase",
+      "stationary": false,
+      "camera_reference": "matched baseline poses",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__otepaa_motion_chase.mp4",
+      "poster": "posters/matched-motion-otepaa_motion_chase.jpg",
+      "bytes": 34979525,
+      "sha256": "f96fda68516925f7da60515d13ec622878583683408b8d1ab705c8e041643e9e",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 150,
+      "duration_seconds": 5
+    }
+  ],
+  "original_stills": [
+    {
+      "case": "ruuhimaki_still0_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still0_chase_000.png",
+      "sha256": "ddbc8ac6b5ec0c094f871e9de8c0dbd18e22a77742fc6ae9cbf558b392d8df5f"
+    },
+    {
+      "case": "ruuhimaki_still0_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still0_heli_000.png",
+      "sha256": "2868327801cf8d5f125fca62d7eb072fe8a187d850b59422d865fe1f0a68be5f"
+    },
+    {
+      "case": "ruuhimaki_still1_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still1_chase_000.png",
+      "sha256": "ccde55b7f22c6288428de075f06da7974e2af4c56c50140464b34926af0698e4"
+    },
+    {
+      "case": "ruuhimaki_still1_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still1_heli_000.png",
+      "sha256": "9711004c6b45b02cf0699f3803b8462b2cfded6b7c74dfc78379444a93a4ff89"
+    },
+    {
+      "case": "ruuhimaki_still2_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still2_chase_000.png",
+      "sha256": "a460509685774c0e3ee6f5508fbb30cfc1ec18f9514160e8977e57a4c79afb07"
+    },
+    {
+      "case": "ruuhimaki_still2_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still2_heli_000.png",
+      "sha256": "d41155ce5b1326fad36db282967c76a0b90879087d4812c6f5d58bc2bf2ac7a1"
+    },
+    {
+      "case": "ruuhimaki_still3_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still3_chase_000.png",
+      "sha256": "2980381d4c2907a0f14affdc35c32a2927d7b23ed7934902690da2eca814e78a"
+    },
+    {
+      "case": "ruuhimaki_still3_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still3_heli_000.png",
+      "sha256": "1fd89843e21738e21cc13a1274ef58f3dea3a980657c18b37dbbecae98159b2d"
+    },
+    {
+      "case": "ruuhimaki_still4_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still4_chase_000.png",
+      "sha256": "05c8abe214444f18719661332c1d5345b647bdcfb281e0af0443aea1bdd54597"
+    },
+    {
+      "case": "ruuhimaki_still4_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_still4_heli_000.png",
+      "sha256": "95bbf2ca2be56f8a7038b3b7a144c55e745235ac9be0152945c6903852e67350"
+    },
+    {
+      "case": "neeruti_still0_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still0_chase_000.png",
+      "sha256": "ba3b13d2322ab57cc1c8df88df29768b3a78c12761dd11c335e24b2d6906fdb6"
+    },
+    {
+      "case": "neeruti_still0_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still0_heli_000.png",
+      "sha256": "cf7d63f47d3d9be305509088c4b0ce943353beaa93ba7d61668613f1382d4afe"
+    },
+    {
+      "case": "neeruti_still1_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still1_chase_000.png",
+      "sha256": "80b5f0440e771f7ce4570771c1f0acf99eb1b03e134661fb137f46c3324c9294"
+    },
+    {
+      "case": "neeruti_still1_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still1_heli_000.png",
+      "sha256": "153d9dd9834e1da942c0ee109ad97e5f66765556fe2c86ee61979b9f9fa0d205"
+    },
+    {
+      "case": "neeruti_still2_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still2_chase_000.png",
+      "sha256": "3d3b05bf91773ab0a7b9c4b2e250ccdcc219abc720cdcc7460b2c301e9f18540"
+    },
+    {
+      "case": "neeruti_still2_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still2_heli_000.png",
+      "sha256": "33259ad5fd8819700fb2b5b858485072f24eb97912049951b1c1f90c97816342"
+    },
+    {
+      "case": "neeruti_still3_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still3_chase_000.png",
+      "sha256": "00c99a029971782b575ea97dc2f3985b89fa3e458756412815cb7b701bebfa05"
+    },
+    {
+      "case": "neeruti_still3_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still3_heli_000.png",
+      "sha256": "7a2ea22e643b151b53949e8224bee2d835cd8b31071e4e7d6258deb8f052da40"
+    },
+    {
+      "case": "neeruti_still4_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still4_chase_000.png",
+      "sha256": "b8a8aae9c2730eb321c1dd8a87e243dff38bccf069c629337558c95899a0fce8"
+    },
+    {
+      "case": "neeruti_still4_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_still4_heli_000.png",
+      "sha256": "8a9a2e9d46130eacc74737fd118dcf9b3c6fe762b59a5aaf8bc54f24b099e65f"
+    },
+    {
+      "case": "elva_still0_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still0_chase_000.png",
+      "sha256": "ec6dbe767fd47ac5b7834ffbc39b5414f7191a79d62d7dbcca4a455965bd4db9"
+    },
+    {
+      "case": "elva_still0_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still0_heli_000.png",
+      "sha256": "f17191174ab109c8108aa74bb5a5a884b1b474239aedccd5f49bdc04140328c8"
+    },
+    {
+      "case": "elva_still1_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still1_chase_000.png",
+      "sha256": "33761bbc21302fe373adec9b05567d90b0506278a6aa49e6d599337a2360f158"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still1_heli_000.png",
+      "sha256": "367de2fe4a2e96727069e9e7c0beed67bca6f132a9d45ea242c9416642dd6751"
+    },
+    {
+      "case": "elva_still2_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still2_chase_000.png",
+      "sha256": "28a7c4e4778d8cf178328e2b5193318849a9362755f28dc5e4a2f38a939d852c"
+    },
+    {
+      "case": "elva_still2_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still2_heli_000.png",
+      "sha256": "71a3bfa994d241a9671edd898e5c1c0e3515ae0c0a28ef9296643e13d60264df"
+    },
+    {
+      "case": "elva_still3_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still3_chase_000.png",
+      "sha256": "810881af67e6fa2a1fb4e2f14caaa603ba8b5655cc259b9cc48a270d8f6f8775"
+    },
+    {
+      "case": "elva_still3_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still3_heli_000.png",
+      "sha256": "fb0d0e5b27ebe93e88d010d1b388772aa61780c39ebf5baf1abbc2d9ad19b57a"
+    },
+    {
+      "case": "elva_still4_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still4_chase_000.png",
+      "sha256": "fe63aafacbde66b5207c11b2097826d673aaef5ee88558086d909a0936b16258"
+    },
+    {
+      "case": "elva_still4_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_still4_heli_000.png",
+      "sha256": "0f8c86f48ce0dbd61047dece87432877433386b712026c4a8a384a044eea55f1"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still0_chase_000.png",
+      "sha256": "3ba19c806bed7d97136050d45042d0d3f627156232a7c8bb9234545900ae45c9"
+    },
+    {
+      "case": "otepaa_still0_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still0_heli_000.png",
+      "sha256": "64e5879493857553d2be88aedef0414457e5155f7de3a655174779d770757123"
+    },
+    {
+      "case": "otepaa_still1_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still1_chase_000.png",
+      "sha256": "a46f955f33265f507a94e00b15493e371d585740ee52d60accc278b2859efc6c"
+    },
+    {
+      "case": "otepaa_still1_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still1_heli_000.png",
+      "sha256": "15899ea086f65fa54a9d7164a68aca17f05ca8566a222379ca2002da80606d61"
+    },
+    {
+      "case": "otepaa_still2_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still2_chase_000.png",
+      "sha256": "45ac5cd2ae497f31d1b0890cbd3a78d1b8d788cd702746237f35624f706e6f9b"
+    },
+    {
+      "case": "otepaa_still2_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still2_heli_000.png",
+      "sha256": "8b7789a069bc71d1118aa87bbf912b63aaff867dcd30c20b18fe0c9c0d121f4c"
+    },
+    {
+      "case": "otepaa_still3_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still3_chase_000.png",
+      "sha256": "ea5df1499819aa250e464d3976bf78cf42b309939665c28539694bcc8d1442ee"
+    },
+    {
+      "case": "otepaa_still3_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still3_heli_000.png",
+      "sha256": "badbb5b750569025a724923fee6356aab166604adcf6e02b660c429bfc10177e"
+    },
+    {
+      "case": "otepaa_still4_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still4_chase_000.png",
+      "sha256": "352eb704b02cd3cc9b525344333014cf90ea4c9544b0a957677e3652cd257885"
+    },
+    {
+      "case": "otepaa_still4_heli",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_still4_heli_000.png",
+      "sha256": "8b489395a117b8e7b43ce3227461d3f2e2c13e5779ccb375508680d734e7943a"
+    },
+    {
+      "case": "neeruti_closeup_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_closeup_chase_000.png",
+      "sha256": "843dfeef550748cc82015c195b9ab21fb297c0f5394690f161e8820f177a43a1"
+    },
+    {
+      "case": "elva_closeup_chase",
+      "version": "before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_closeup_chase_000.png",
+      "sha256": "b69323f9feb0f8f2db7be56ca70a02bf0e69f2e6e21c95516e8f6ed241fcbf7c"
+    },
+    {
+      "case": "ruuhimaki_still0_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still0_chase_000.png",
+      "sha256": "cb333913c680ea24bb3a43d076ad6cb49cde584d1865a40f5a4cf6e55c54f629"
+    },
+    {
+      "case": "ruuhimaki_still0_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still0_heli_000.png",
+      "sha256": "03fc1d3378b2bf0e9250d4849adca2147a6fe07f1e7971c86414b20c44b0f118"
+    },
+    {
+      "case": "ruuhimaki_still1_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still1_chase_000.png",
+      "sha256": "8f8f8453e0caecdb0ce7b69d5823864a84aee6981649f96d99b04ca61c2e53d5"
+    },
+    {
+      "case": "ruuhimaki_still1_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still1_heli_000.png",
+      "sha256": "094a3bd3cfa27ec6f18dc4c1c7e864f2c4e52605e0e5d7b339f708e099d20b8f"
+    },
+    {
+      "case": "ruuhimaki_still2_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still2_chase_000.png",
+      "sha256": "8c561a3f6894bf77bdae29188b9ada1f6e61cd0400436a3f394bcf5ff6ebd99b"
+    },
+    {
+      "case": "ruuhimaki_still2_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still2_heli_000.png",
+      "sha256": "f85dd529c437e9ac6dfb3bb24baa36751b3fbabeae3d7c2d5a42ab5d9e0c37d0"
+    },
+    {
+      "case": "ruuhimaki_still3_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still3_chase_000.png",
+      "sha256": "113cf1c2e4323035124b0ae289cca9e8e36341d6eadbba8bac3c7f9f2062a8e9"
+    },
+    {
+      "case": "ruuhimaki_still3_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still3_heli_000.png",
+      "sha256": "c6990e5a5fca243b0b5e9e795af9c79f8754bc4418663e4437f2e0b0c03698ec"
+    },
+    {
+      "case": "ruuhimaki_still4_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still4_chase_000.png",
+      "sha256": "d9d014d12e38a918efb56a25677262c35a0b9fad2fdbe38abfda10f524e03662"
+    },
+    {
+      "case": "ruuhimaki_still4_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_still4_heli_000.png",
+      "sha256": "2cee9330d1efb4190f58a58c29383619cec4175b9f5f549fe782af346ca03e2b"
+    },
+    {
+      "case": "neeruti_still0_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still0_chase_000.png",
+      "sha256": "bb6338b85758db4402b820cd33d88cbbb4c03cc0066e5bfe9969e35522bb7f49"
+    },
+    {
+      "case": "neeruti_still0_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still0_heli_000.png",
+      "sha256": "1536e06a8cb99e1037b82aa22d8cd7e99107df3c6607e7e57c51c30d80e062a0"
+    },
+    {
+      "case": "neeruti_still1_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still1_chase_000.png",
+      "sha256": "4b852b45a9283ab026f9069500c491214e72817aaf9e7896e69a1f8aa07e93f6"
+    },
+    {
+      "case": "neeruti_still1_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still1_heli_000.png",
+      "sha256": "aa08b8041a7c780b09f0594d914097651c80869076a8a774cdcfba01558fcc49"
+    },
+    {
+      "case": "neeruti_still2_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still2_chase_000.png",
+      "sha256": "df7ce84130b60ecbc5a86d8bc2c2f627ebbf85478a6af77728ebc7f81cd79988"
+    },
+    {
+      "case": "neeruti_still2_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still2_heli_000.png",
+      "sha256": "4a560f3670c842c0b5e8ad1c40f6dd52489dc978df619e86bf499727b3e951a8"
+    },
+    {
+      "case": "neeruti_still3_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still3_chase_000.png",
+      "sha256": "3cf18cd5563a735a0c0919eba8d8cf88515c89630d3a10fa2816936da2b3e277"
+    },
+    {
+      "case": "neeruti_still3_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still3_heli_000.png",
+      "sha256": "4f69f16d4865b141a29ba2064f3cb9926d8fc5dd69b4ed77def2ca2356e41f7e"
+    },
+    {
+      "case": "neeruti_still4_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still4_chase_000.png",
+      "sha256": "133f1ef87492f8505631992ab199b7e31ebd6b64b41ce72424755c27e3511091"
+    },
+    {
+      "case": "neeruti_still4_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_still4_heli_000.png",
+      "sha256": "7da829deb462ff6049ffed32a940e4304ea12599a3b94d70038d4a3de4256c8b"
+    },
+    {
+      "case": "elva_still0_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still0_chase_000.png",
+      "sha256": "9725017e49345a829e2a0b71bbe99369b11aedc5ee2bddbb6fc84a26b2e24ddc"
+    },
+    {
+      "case": "elva_still0_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still0_heli_000.png",
+      "sha256": "8dc78eb817f36ff33572ae347c32af4ddd093cededb65846b8928197b6102032"
+    },
+    {
+      "case": "elva_still1_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still1_chase_000.png",
+      "sha256": "e334b86416b0bd5071ed0e379fd98a502df705ecb14da8c6badef6a1b4781c4b"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still1_heli_000.png",
+      "sha256": "ac3183315d640de662dbd858f89dc20ec8aa2c2d3876bc7deb24457beee035d6"
+    },
+    {
+      "case": "elva_still2_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still2_chase_000.png",
+      "sha256": "d9d04a938f0bc03e89c6cade2806fbbff8c226dfb117ad85f90dbd51805acacd"
+    },
+    {
+      "case": "elva_still2_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still2_heli_000.png",
+      "sha256": "7161515e1a4f13f1d19c3d03ba83d8b7bbdc05519d125c13315a93aae3434a70"
+    },
+    {
+      "case": "elva_still3_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still3_chase_000.png",
+      "sha256": "3d8d1c30f634f14938014b155c4956d073939ff6f5b05d517f80aeadd20ebb89"
+    },
+    {
+      "case": "elva_still3_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still3_heli_000.png",
+      "sha256": "d2aecf1654b08e89941de218f943ba750f11eae63a59c53ea21f798e3ae90ad4"
+    },
+    {
+      "case": "elva_still4_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still4_chase_000.png",
+      "sha256": "e3f9eb476f9ea8a29b60d6f220a0ba983ba245036d006294f65bae9d5c69b00b"
+    },
+    {
+      "case": "elva_still4_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_still4_heli_000.png",
+      "sha256": "83cd3b0867168ed5e99bedb2e25356a4190b6f3e0b788c9cfb4b513cac5c76cd"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still0_chase_000.png",
+      "sha256": "00ae2145e4b5ccd41054c85d89b5cf9cd75c92a6bd0b1a710e7b4afd547b5f90"
+    },
+    {
+      "case": "otepaa_still0_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still0_heli_000.png",
+      "sha256": "6ac9de7dc66c4f9877ac4698021ab478cb07c2c9b1b6b134f3c8b71cc8c4a627"
+    },
+    {
+      "case": "otepaa_still1_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still1_chase_000.png",
+      "sha256": "3785c2b5f2b55102b9926542c659d9531bd7f17b001ff0b3e404ddaf9ad57b9c"
+    },
+    {
+      "case": "otepaa_still1_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still1_heli_000.png",
+      "sha256": "a370c8aba9814d59c7f969a03451991d209a8912a05f0277c554dcc5d538bfb4"
+    },
+    {
+      "case": "otepaa_still2_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still2_chase_000.png",
+      "sha256": "70d2252b7c8f8d6200ee2b928f32b64e1a494b316c60255784b486b4209572c7"
+    },
+    {
+      "case": "otepaa_still2_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still2_heli_000.png",
+      "sha256": "6b7692909d63d896ab623a6c8add3511479064e36009773891a8358fcf37f6e1"
+    },
+    {
+      "case": "otepaa_still3_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still3_chase_000.png",
+      "sha256": "d9460a1ea0595be7a80025dac113e33eee4121dfe1f849b97df95f1dbf07ba00"
+    },
+    {
+      "case": "otepaa_still3_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still3_heli_000.png",
+      "sha256": "33d5ea1fe4b1c69221abc27352845abeededb41cb7979d036f4f93f9d5fb3204"
+    },
+    {
+      "case": "otepaa_still4_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still4_chase_000.png",
+      "sha256": "bd4ce7ed926c8072efe508e7e891ee19d65df0221fdbb46d7f9276dc5dd43dab"
+    },
+    {
+      "case": "otepaa_still4_heli",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_still4_heli_000.png",
+      "sha256": "9789e82e71527cd6024be2b7af61488ead61905fe04a54341c56199399ccd892"
+    },
+    {
+      "case": "neeruti_closeup_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_closeup_chase_000.png",
+      "sha256": "7255a19ecfc3c5b403a6595c8778193a107367cf6ef758113b20b8c1d8620d85"
+    },
+    {
+      "case": "elva_closeup_chase",
+      "version": "after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_closeup_chase_000.png",
+      "sha256": "979daaad52fc1a0561ae10f5bf97c0d95ff20fb4411ed4c924a11e13ee5daa0a"
+    },
+    {
+      "case": "ruuhimaki_still0_chase",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__ruuhimaki_still0_chase_000.png",
+      "sha256": "6cdd8aa263dcabd00c586c5a002fa6d14d11b0185328d3008e40b25de7e8b063"
+    },
+    {
+      "case": "ruuhimaki_still3_heli",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__ruuhimaki_still3_heli_000.png",
+      "sha256": "15695cee5aad826a122e08f67b406204c1f48f895644feecaadfba5060ed93e9"
+    },
+    {
+      "case": "neeruti_still0_chase",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__neeruti_still0_chase_000.png",
+      "sha256": "b50eace7e31e135c45710c862fcfb4e087244fac3268e7bcb27af6bb52410c21"
+    },
+    {
+      "case": "neeruti_still3_heli",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__neeruti_still3_heli_000.png",
+      "sha256": "3aef9fce30251f0eda94161e4c16bccd014ab763e8629de13d7714e8e295e93b"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__elva_still1_heli_000.png",
+      "sha256": "fe6c27b00a7a1f89d6e36bcd5aa27f43372a4ed395c422985abdc066956c7027"
+    },
+    {
+      "case": "elva_still3_chase",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__elva_still3_chase_000.png",
+      "sha256": "332cb82680197193028541957d50c75f0358c60eea7a7ea5c04618c06b98806f"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__otepaa_still0_chase_000.png",
+      "sha256": "11810fa3f11b2980db0823106c8396a93117dffd50cf9557d3f446163905fd74"
+    },
+    {
+      "case": "otepaa_still4_heli",
+      "version": "before4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before4k__otepaa_still4_heli_000.png",
+      "sha256": "7e31eef80900933146db2377ff280c15b9e61a4da01dd2b905c530b37f5c5be1"
+    },
+    {
+      "case": "ruuhimaki_still0_chase",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__ruuhimaki_still0_chase_000.png",
+      "sha256": "a15085252782eadfd5feff27a8f4efc6ed228250801f1d2ecde7c1b2466d3949"
+    },
+    {
+      "case": "ruuhimaki_still3_heli",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__ruuhimaki_still3_heli_000.png",
+      "sha256": "5af7f52428678524aeef8a9de76460456c6c76191335d6ea3a6cf440d145dbc8"
+    },
+    {
+      "case": "neeruti_still0_chase",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__neeruti_still0_chase_000.png",
+      "sha256": "0b78484813916160de311bb02b7e1064eede9e7252a2075e27142fee647c2096"
+    },
+    {
+      "case": "neeruti_still3_heli",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__neeruti_still3_heli_000.png",
+      "sha256": "5f442bd872f57631d4fa31ca389b5d73b23fa18d339644b8a6746f1928e4de4c"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__elva_still1_heli_000.png",
+      "sha256": "a13ddef7aebf3cefb2d4fddb6c0779b53b5e0d1920ddb92961ad0fcc7a109e4f"
+    },
+    {
+      "case": "elva_still3_chase",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__elva_still3_chase_000.png",
+      "sha256": "59a60c11139057e458b4e4fd24b2841a6b4db36ead35ae6397e07e052c509c5b"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__otepaa_still0_chase_000.png",
+      "sha256": "d5a0d90843475aa5b1da4be27da51ea0a6f1e7c916cafe57f69961935921d6dc"
+    },
+    {
+      "case": "otepaa_still4_heli",
+      "version": "after4k",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after4k__otepaa_still4_heli_000.png",
+      "sha256": "0877da44c105c952729e1fd53967711d2969e253ae79e1586387b5f667dfffd2"
+    },
+    {
+      "case": "elva_water_feature",
+      "version": "features-before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-before__elva_water_feature_000.png",
+      "sha256": "2003c371bfaa9365e7e387f6c49294daa3931bf7d21a7695572a24bf8bccb733"
+    },
+    {
+      "case": "otepaa_water_feature",
+      "version": "features-before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-before__otepaa_water_feature_000.png",
+      "sha256": "90b32db74a3ea9648f0b8ac1c602aa5ef2133823b6f60f8799c0946ac93e1caa"
+    },
+    {
+      "case": "neeruti_building_feature",
+      "version": "features-before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-before__neeruti_building_feature_000.png",
+      "sha256": "de1a51ce032d71e86548469dc9292019414241a95aafc174609b738b5d4812da"
+    },
+    {
+      "case": "ruuhimaki_building_feature",
+      "version": "features-before",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-before__ruuhimaki_building_feature_000.png",
+      "sha256": "492e547291159c2e3632cfb5dfa6c1e747e7925d5851f280bdc522f466eb506e"
+    },
+    {
+      "case": "elva_water_feature",
+      "version": "features-after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-after__elva_water_feature_000.png",
+      "sha256": "61cdd481261b08b8b50bdffca5d63ef0253cc378e8ca4fc8dfaafa6302ad9e89"
+    },
+    {
+      "case": "otepaa_water_feature",
+      "version": "features-after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-after__otepaa_water_feature_000.png",
+      "sha256": "c23945bbfa142d18f7b53fd37036826a604bf3e4bdd078b7a4b10ff053f1d13a"
+    },
+    {
+      "case": "neeruti_building_feature",
+      "version": "features-after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-after__neeruti_building_feature_000.png",
+      "sha256": "74af5412b70fcc6f4179036ca1f81ad51b2375afc4dc97aa33670dabe90637f3"
+    },
+    {
+      "case": "ruuhimaki_building_feature",
+      "version": "features-after",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/features-after__ruuhimaki_building_feature_000.png",
+      "sha256": "861d280c7e73d09f8d10441f53f56f3a91385c942f708ddac6510fe6213fc06d"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "check-noon",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-noon__elva_still1_heli_000.png",
+      "sha256": "62ab39c8aea28ebe27c96ba2d641dd89414c33a0e8ff3261066d85c2a3894e0b"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "check-noon",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-noon__otepaa_still0_chase_000.png",
+      "sha256": "d44e75af2d45a1ac201fe78b0e52bef3e5aa3a9ea7de45239940ca360aec95df"
+    },
+    {
+      "case": "elva_still1_heli",
+      "version": "check-night",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-night__elva_still1_heli_000.png",
+      "sha256": "a274d67add4ccf6d624fc95d7c562f69bbc36ae4dba6ecf330d69d76640f1f40"
+    },
+    {
+      "case": "otepaa_still0_chase",
+      "version": "check-night",
+      "url": "https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-night__otepaa_still0_chase_000.png",
+      "sha256": "c83e57058d58eac1759f281aea4504eac2c0b1b129faedffa94e28207cf46e40"
+    }
+  ]
+}

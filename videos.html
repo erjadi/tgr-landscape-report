@@ -1,0 +1,304 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="referrer" content="no-referrer"><title>Landscape report: original video library</title>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&family=Instrument+Serif&display=swap" rel="stylesheet">
+      <style>
+:root{
+ --bg:#f8f6ef;--surface:#fffdf7;--surface2:#f0eee3;--text:#21372c;--dim:#5b6b60;
+ --border:rgba(38,59,45,.15);--green:#28644c;--green-dim:#e6eee2;
+ --gold:#a77d38;--gold-dim:#f5ecd8;--rust:#9d562d;--blue:#466a7e;
+ --body:'IBM Plex Sans','Segoe UI',sans-serif;--head:'Instrument Serif',Georgia,serif;
+ --mono:'IBM Plex Mono',Consolas,monospace;
+}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#15201b;--surface:#1c2a22;--surface2:#233328;--text:#e5ebe0;--dim:#b0beb0;
+ --border:rgba(219,232,212,.16);--green:#9dc09d;--green-dim:#283e2e;
+ --gold:#ddbc7a;--gold-dim:#3b3324;--rust:#dfab7e;--blue:#aec8d2;
+}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}
+body{margin:0;color:var(--text);background:var(--bg);font:16px/1.65 var(--body);
+ background-image:linear-gradient(130deg,var(--green-dim),transparent 30%)}
+a{color:var(--green);text-underline-offset:3px}img,video{display:block;width:100%;height:auto}
+button{font:600 14px var(--body);padding:10px 18px;border:1px solid var(--border);color:var(--text);
+ background:var(--surface2);cursor:pointer}button:hover{border-color:var(--green)}
+.wrap{max-width:1600px;margin:auto;padding:36px 34px 100px;display:grid;grid-template-columns:180px minmax(0,1fr);gap:38px}
+.toc{position:sticky;top:24px;align-self:start;max-height:92vh;overflow:auto;font:12px/1.6 var(--mono)}
+.toc strong{display:block;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:16px}
+.toc a{display:block;padding:7px 0;color:var(--dim);text-decoration:none;border-bottom:1px solid var(--border)}
+.toc a:hover{color:var(--green)}main{min-width:0}section{margin:64px 0}section>h2{border-top:1px solid var(--border);padding-top:22px}
+h1,h2,h3{line-height:1.12;margin:0 0 18px}h1{font:clamp(46px,6.6vw,88px)/1.01 var(--head);max-width:950px;letter-spacing:-1.5px}
+h2{font:42px var(--head)}h3{font-size:22px}p{margin:0 0 18px}li{margin:7px 0}
+.eyebrow{display:block;font:11px/1.5 var(--mono);letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.hero{padding:38px 40px 32px;background:var(--surface);border-left:6px solid var(--green);
+ box-shadow:0 16px 38px rgba(30,46,34,.06);animation:arrive .4s ease both}
+.lead{font-size:22px;max-width:950px;color:var(--dim)}
+.status{display:inline-block;font:12px var(--mono);padding:7px 10px;background:var(--green-dim);margin:0 0 22px}
+.metrics{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;margin:26px 0 0}
+.metric{padding:20px;border-top:1px solid var(--border)}.metric b{display:block;font:42px/1.1 var(--head)}
+.metric span{font-size:13px;color:var(--dim)}
+.callout{border-left:3px solid var(--gold);padding:18px 22px;background:var(--gold-dim);margin:24px 0}
+.fine{font-size:13px;color:var(--dim)}.muted{color:var(--dim)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ve-card{min-width:0;padding:24px;background:var(--surface);border:1px solid var(--border)}
+.ve-card:nth-child(2){border-top:3px solid var(--gold)}.ve-card h3{font-size:20px}
+.pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:28px 0}
+.pipeline>div{border:2px solid var(--green);background:var(--green-dim);padding:18px;min-width:0}
+.pipeline>div:nth-child(2){border-color:var(--blue)}.pipeline>div:nth-child(3){border-color:var(--gold);background:var(--gold-dim)}
+.pipeline b{display:block;font:12px var(--mono);margin-bottom:10px}.pipeline p{font-size:13px;line-height:1.5;margin:0}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.pair>*{min-width:0}
+.comparison{margin:34px 0 48px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.comparison header p{max-width:1000px;color:var(--dim);font-size:15px}
+figure{margin:0;min-width:0}figure img,video{background:#15201b;border:1px solid var(--border)}
+figcaption{font-size:12px;color:var(--dim);padding:8px 0 0;overflow-wrap:anywhere}
+.label{display:inline-block;font:11px var(--mono);text-transform:uppercase;letter-spacing:1px;padding:5px 9px;margin-bottom:7px}
+.label.before{background:var(--gold-dim);color:var(--gold)}.label.after{background:var(--green-dim);color:var(--green)}
+.table-wrap{overflow:auto;border:1px solid var(--border);margin:24px 0}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.5}
+th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--border);vertical-align:top;min-width:115px}
+th{position:sticky;top:0;background:var(--surface2);font:11px var(--mono);text-transform:uppercase}
+tbody tr:nth-child(even){background:var(--surface)}td:first-child{font-weight:600}tr:hover{background:var(--green-dim)}
+code,pre{font:12px/1.65 var(--mono);overflow-wrap:anywhere}
+code{background:var(--surface2);padding:2px 4px}pre{padding:20px;background:var(--surface2);white-space:pre-wrap;max-height:550px;overflow:auto}
+details{padding:16px 18px;margin:20px 0;border:1px solid var(--border);background:var(--surface)}
+summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.gallery figcaption{font-size:11px}
+.perf{width:100%;height:auto;margin:20px 0}.perf text{fill:var(--text);font:13px var(--mono)}
+.perf .chart-title{font:17px var(--body)}.perf .chart-note{font:10px var(--mono)}
+.legend{font-size:13px;display:flex;gap:22px;flex-wrap:wrap}.legend i{display:inline-block;width:11px;height:11px;margin-right:6px}
+.sources{font-size:14px}.sources li{padding-left:6px;margin-bottom:12px}
+.divider{font:12px var(--mono);color:var(--dim);margin-top:42px}.pass{color:var(--green);font-weight:700}
+.warn{color:var(--rust);font-weight:700}.native{border-left:3px solid var(--blue);padding-left:18px}
+@keyframes arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1050px){.wrap{grid-template-columns:1fr;padding:20px;gap:24px}.toc{display:flex;gap:18px;position:sticky;top:0;
+ background:var(--bg);z-index:5;overflow-x:auto;max-height:70px;white-space:nowrap;padding:10px}.toc strong{display:none}.toc a{border:0}
+ .hero{padding:28px}.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.pair,.grid,.metrics,.gallery,.pipeline{grid-template-columns:1fr}h2{font-size:34px}.hero{padding:23px}
+ .wrap{padding:12px}.lead{font-size:18px}section{margin:40px 0}.metric b{font-size:36px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media print{.toc,button{display:none}.wrap{display:block;padding:0}.hero{box-shadow:none}.pair{break-inside:avoid}
+ video{display:none}details{display:block}section{margin:24px 0}body{font-size:11px}}
+
+      .library{max-width:1450px;margin:auto;padding:28px;min-width:0}
+      .filters{display:flex;gap:18px;flex-wrap:wrap;margin:28px 0}
+      label{display:grid;gap:6px;min-width:180px}select{padding:12px;background:var(--surface);color:var(--text);border:1px solid var(--border);font:inherit}
+      .clip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+      .clip-card h2{font:20px/1.35 var(--body);overflow-wrap:anywhere}
+      .clip-card p{margin:12px 0}.clip-card[hidden]{display:none}
+      @media(max-width:750px){.clip-grid{grid-template-columns:1fr}.library{padding:14px}}
+      </style></head><body><main class="library">
+      <p><a href="index.html">Back to the illustrated report</a></p>
+      <header class="hero"><span class="eyebrow">Original acceptance evidence / no sign-in</span>
+      <h1>26 clips.<br>One traceable comparison.</h1>
+      <p class="lead">Original full-HD H264 captures, not the smaller report previews. Every clip contains
+      150 individually rendered frames at 30 FPS for five seconds. They were rendered offline, not streamed live.</p>
+      <p>Baseline and native-camera candidates can have different framing. The four exact-old-camera
+      controls isolate the rendering change. Fixed-eye clips still contain moving cars, wind and shadows.</p>
+      <p class="fine">Videos load only when played; original files can be large.
+      <a href="evidence.json">Public evidence catalogue and SHA-256 checksums</a>.</p></header>
+      <div class="filters"><label>Stage<select id="stage-filter"><option value="">All four stages</option>
+      <option value="ruuhimaki">Ruuhimäki</option><option value="neeruti">Neeruti</option><option value="elva">Elva</option><option value="otepaa">Otepää</option></select></label>
+      <label>Capture version<select id="version-filter"><option value="">All versions</option>
+      <option value="before">Baseline</option><option value="after">Candidate / native or fixed eye</option>
+      <option value="matched-motion">Candidate / exact old camera</option></select></label></div>
+      <p id="filter-status" role="status" class="fine"></p><div class="clip-grid">
+        <article class="clip-card ve-card" data-stage="ruuhimaki" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Ruuhimäki / ruuhimaki motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-ruuhimaki_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_chase.mp4" aria-label="Ruuhimäki / ruuhimaki motion chase - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_chase.mp4" download>Download original MP4 &middot; 41.8 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="ruuhimaki" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Ruuhimäki / ruuhimaki motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-ruuhimaki_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_heli.mp4" aria-label="Ruuhimäki / ruuhimaki motion heli - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__ruuhimaki_motion_heli.mp4" download>Download original MP4 &middot; 35.9 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Neeruti / neeruti motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-neeruti_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_chase.mp4" aria-label="Neeruti / neeruti motion chase - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_chase.mp4" download>Download original MP4 &middot; 36.1 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Neeruti / neeruti motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-neeruti_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_heli.mp4" aria-label="Neeruti / neeruti motion heli - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_motion_heli.mp4" download>Download original MP4 &middot; 38.0 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Elva / elva motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-elva_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_chase.mp4" aria-label="Elva / elva motion chase - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_chase.mp4" download>Download original MP4 &middot; 39.6 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Elva / elva motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-elva_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_heli.mp4" aria-label="Elva / elva motion heli - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_motion_heli.mp4" download>Download original MP4 &middot; 39.6 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="otepaa" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Otepää / otepaa motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-otepaa_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_chase.mp4" aria-label="Otepää / otepaa motion chase - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_chase.mp4" download>Download original MP4 &middot; 42.5 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="otepaa" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Otepää / otepaa motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-otepaa_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_heli.mp4" aria-label="Otepää / otepaa motion heli - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__otepaa_motion_heli.mp4" download>Download original MP4 &middot; 32.8 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Neeruti / neeruti near motion</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-neeruti_near_motion.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_near_motion.mp4" aria-label="Neeruti / neeruti near motion - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__neeruti_near_motion.mp4" download>Download original MP4 &middot; 36.2 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="before">
+          <span class="eyebrow">Baseline</span><h2>Elva / elva near motion</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-elva_near_motion.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_near_motion.mp4" aria-label="Elva / elva near motion - Baseline"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_near_motion.mp4" download>Download original MP4 &middot; 36.5 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="before">
+          <span class="eyebrow">Baseline / fixed eye</span><h2>Elva / elva wind stationary</h2>
+          <video controls muted playsinline preload="none" poster="posters/before-elva_wind_stationary.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_wind_stationary.mp4" aria-label="Elva / elva wind stationary - Baseline / fixed eye"></video>
+          <p class="fine">native baseline &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/before__elva_wind_stationary.mp4" download>Download original MP4 &middot; 15.0 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="ruuhimaki" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Ruuhimäki / ruuhimaki motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-ruuhimaki_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_chase.mp4" aria-label="Ruuhimäki / ruuhimaki motion chase - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_chase.mp4" download>Download original MP4 &middot; 31.0 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="ruuhimaki" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Ruuhimäki / ruuhimaki motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-ruuhimaki_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_heli.mp4" aria-label="Ruuhimäki / ruuhimaki motion heli - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__ruuhimaki_motion_heli.mp4" download>Download original MP4 &middot; 24.1 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Neeruti / neeruti motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-neeruti_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_chase.mp4" aria-label="Neeruti / neeruti motion chase - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_chase.mp4" download>Download original MP4 &middot; 27.7 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Neeruti / neeruti motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-neeruti_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_heli.mp4" aria-label="Neeruti / neeruti motion heli - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_motion_heli.mp4" download>Download original MP4 &middot; 29.3 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Elva / elva motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-elva_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_chase.mp4" aria-label="Elva / elva motion chase - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_chase.mp4" download>Download original MP4 &middot; 33.5 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Elva / elva motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-elva_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_heli.mp4" aria-label="Elva / elva motion heli - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_motion_heli.mp4" download>Download original MP4 &middot; 30.7 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="otepaa" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Otepää / otepaa motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-otepaa_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_chase.mp4" aria-label="Otepää / otepaa motion chase - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_chase.mp4" download>Download original MP4 &middot; 32.1 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="otepaa" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Otepää / otepaa motion heli</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-otepaa_motion_heli.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_heli.mp4" aria-label="Otepää / otepaa motion heli - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__otepaa_motion_heli.mp4" download>Download original MP4 &middot; 22.0 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Neeruti / neeruti near motion</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-neeruti_near_motion.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_near_motion.mp4" aria-label="Neeruti / neeruti near motion - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__neeruti_near_motion.mp4" download>Download original MP4 &middot; 24.2 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="after">
+          <span class="eyebrow">Candidate / native camera</span><h2>Elva / elva near motion</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-elva_near_motion.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_near_motion.mp4" aria-label="Elva / elva near motion - Candidate / native camera"></video>
+          <p class="fine">native camera path &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_near_motion.mp4" download>Download original MP4 &middot; 28.1 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="after">
+          <span class="eyebrow">Candidate / same fixed eye</span><h2>Elva / elva wind stationary</h2>
+          <video controls muted playsinline preload="none" poster="posters/after-elva_wind_stationary.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_wind_stationary.mp4" aria-label="Elva / elva wind stationary - Candidate / same fixed eye"></video>
+          <p class="fine">matched baseline poses &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/after__elva_wind_stationary.mp4" download>Download original MP4 &middot; 13.3 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="ruuhimaki" data-version="matched-motion">
+          <span class="eyebrow">Candidate / exact old camera</span><h2>Ruuhimäki / ruuhimaki motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/matched-motion-ruuhimaki_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__ruuhimaki_motion_chase.mp4" aria-label="Ruuhimäki / ruuhimaki motion chase - Candidate / exact old camera"></video>
+          <p class="fine">matched baseline poses &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__ruuhimaki_motion_chase.mp4" download>Download original MP4 &middot; 38.5 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="neeruti" data-version="matched-motion">
+          <span class="eyebrow">Candidate / exact old camera</span><h2>Neeruti / neeruti motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/matched-motion-neeruti_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__neeruti_motion_chase.mp4" aria-label="Neeruti / neeruti motion chase - Candidate / exact old camera"></video>
+          <p class="fine">matched baseline poses &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__neeruti_motion_chase.mp4" download>Download original MP4 &middot; 30.0 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="elva" data-version="matched-motion">
+          <span class="eyebrow">Candidate / exact old camera</span><h2>Elva / elva motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/matched-motion-elva_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__elva_motion_chase.mp4" aria-label="Elva / elva motion chase - Candidate / exact old camera"></video>
+          <p class="fine">matched baseline poses &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__elva_motion_chase.mp4" download>Download original MP4 &middot; 36.7 MB</a>
+        </article>
+        <article class="clip-card ve-card" data-stage="otepaa" data-version="matched-motion">
+          <span class="eyebrow">Candidate / exact old camera</span><h2>Otepää / otepaa motion chase</h2>
+          <video controls muted playsinline preload="none" poster="posters/matched-motion-otepaa_motion_chase.jpg"
+            src="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__otepaa_motion_chase.mp4" aria-label="Otepää / otepaa motion chase - Candidate / exact old camera"></video>
+          <p class="fine">matched baseline poses &middot; 1920 &times; 1080 / 30 FPS / 5 s</p>
+          <a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/matched-motion__otepaa_motion_chase.mp4" download>Download original MP4 &middot; 35.0 MB</a>
+        </article></div>
+      <footer class="callout">Independent rendering demonstration, not an official historic survey or a guarantee
+      of artifact-free future views. <a href="index.html#sources">Data attribution and limitations</a>.</footer>
+      </main><script>
+const cards=Array.from(document.querySelectorAll('.clip-card'));
+function filterClips(){
+ const stage=document.getElementById('stage-filter').value;
+ const version=document.getElementById('version-filter').value;
+ let count=0;
+ cards.forEach(card=>{
+  const visible=(!stage||card.dataset.stage===stage)&&(!version||card.dataset.version===version);
+  card.hidden=!visible;
+  if(visible)count++;else card.querySelector('video').pause();
+ });
+ document.getElementById('filter-status').textContent=count+' of '+cards.length+' original clips';
+}
+document.querySelectorAll('select').forEach(s=>s.addEventListener('change',filterClips));
+document.addEventListener('play',event=>{
+ if(event.target.tagName==='VIDEO')document.querySelectorAll('video').forEach(v=>{if(v!==event.target)v.pause()});
+},true);
+filterClips();
+</script></body></html>
