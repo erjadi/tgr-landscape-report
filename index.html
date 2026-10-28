@@ -75,8 +75,58 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.toc,button{display:none}.wrap{display:block;padding:0}.hero{box-shadow:none}.pair{break-inside:avoid}
  video{display:none}details{display:block}section{margin:24px 0}body{font-size:11px}}
+
+figure{position:relative}
+figure img{cursor:zoom-in;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+figure img:hover,figure img:focus-visible{border-color:var(--green);box-shadow:0 10px 26px rgba(20,36,26,.18)}
+.zoom-badge{position:absolute;right:10px;top:10px;padding:4px 8px;font:600 10px/1.2 var(--mono);
+ letter-spacing:.8px;text-transform:uppercase;color:#f5f9f4;background:rgba(15,24,19,.78);
+ border:1px solid rgba(255,255,255,.22);pointer-events:none;opacity:0;transition:opacity .15s ease}
+figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
+.evo-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0 34px}
+.evo-strip figure{background:var(--surface);padding:12px;border:1px solid var(--border)}
+.evo-chapter{margin:36px 0;padding:28px 30px;background:var(--surface);border:1px solid var(--border);
+ border-left:5px solid var(--green)}
+.evo-chapter:nth-of-type(even){border-left-color:var(--gold)}
+.evo-chapter header{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.evo-meta{display:flex;gap:12px;flex-wrap:wrap;font:11px/1.4 var(--mono);color:var(--dim);margin-bottom:8px}
+.evo-meta span{background:var(--surface2);padding:4px 8px;border:1px solid var(--border)}
+.evo-quote{margin:16px 0;padding:13px 18px;border-left:3px solid var(--rust);background:var(--surface2);
+ font-style:italic;color:var(--text)}
+.evo-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+.evo-grid-4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.label.milestone{background:var(--surface2);color:var(--blue);border:1px solid var(--border)}
+.label.deadend{background:rgba(157,86,45,.16);color:var(--rust)}
+.lightbox{position:fixed;inset:0;z-index:9999;background:rgba(10,16,13,.94);color:#eef3ec;
+ display:flex;flex-direction:column;justify-content:space-between;backdrop-filter:blur(6px)}
+.lightbox[hidden]{display:none!important}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 20px;
+ background:rgba(18,28,22,.9);border-bottom:1px solid rgba(255,255,255,.14);font:12px/1.4 var(--mono);z-index:2}
+.lb-meta{display:flex;align-items:center;gap:12px;min-width:0;overflow:hidden}
+.lb-counter{padding:4px 8px;background:rgba(255,255,255,.1);font-weight:600;white-space:nowrap}
+.lb-title{font:600 14px/1.3 var(--body);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lb-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lb-actions button,.lb-actions a{font:600 12px/1.2 var(--mono);padding:7px 11px;color:#eef3ec;
+ background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);text-decoration:none;cursor:pointer}
+.lb-actions button:hover,.lb-actions a:hover{border-color:#9dc09d;background:rgba(157,192,157,.2)}
+.lb-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;
+ overflow:hidden;user-select:none;padding:16px 64px}
+.lb-stage.zoomed{cursor:grab}.lb-stage.dragging{cursor:grabbing}
+.lb-img{max-width:95vw;max-height:80vh;width:auto;height:auto;object-fit:contain;
+ border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 64px rgba(0,0,0,.65);
+ transform-origin:center center;transition:transform .08s ease-out}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:64px;
+ font:600 22px/1 var(--mono);color:#eef3ec;background:rgba(18,28,22,.78);
+ border:1px solid rgba(255,255,255,.22); display:flex;align-items:center;justify-content:center;cursor:pointer}
+.lb-nav:hover{background:rgba(40,100,76,.85);border-color:#9dc09d}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-foot{padding:12px 22px;background:rgba(18,28,22,.9);border-top:1px solid rgba(255,255,255,.14);
+ font:13px/1.5 var(--body);color:#d3ddd2;display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap}
+.lb-caption{max-width:1200px}.lb-hint{font:11px var(--mono);color:#9eb0a2;white-space:nowrap}
+@media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4{grid-template-columns:1fr}
+ .lb-stage{padding:10px 12px}.lb-nav{top:auto;bottom:76px;transform:none;height:42px}}
 </style></head><body><div class="wrap">
-    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#grounding">02 / Data & corrections</a><a href="#system">03 / Implementation</a><a href="#stills">04 / Fixed-view evidence</a><a href="#motion">05 / Motion stability</a><a href="#performance">06 / Cost</a><a href="#limits">07 / Limits & rejected ideas</a><a href="#reproduce">08 / Reproduce</a><a href="#sources">09 / Sources & manifests</a></nav>
+    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#evolution">02 / Evolution history</a><a href="#grounding">03 / Data & corrections</a><a href="#system">04 / Implementation</a><a href="#stills">05 / Fixed-view evidence</a><a href="#motion">06 / Motion stability</a><a href="#performance">07 / Cost</a><a href="#limits">08 / Limits & rejected ideas</a><a href="#reproduce">09 / Reproduce</a><a href="#sources">10 / Sources & manifests</a></nav>
     <main><p><a href="videos.html">Watch or download all 26 original videos</a></p><header class="hero"><span class="eyebrow">Landscape reconstruction / four rally stages / 27 October 2026</span>
     <span class="status">Verified on Spain and deployed</span>
     <h1>From a repeated corridor<br>to a surveyed landscape.</h1>
@@ -107,7 +157,275 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
     surveyed trees, or a claim that every asset is now photorealistic. The map is better grounded; tree
     identities, much understory detail, building appearance, road cross-section and rally-day weather
     remain modeled.</p></section>
-    <section id="grounding"><span class="eyebrow">02 / Grounding & corrections</span><h2>Use the actual products, not their preview colours.</h2>
+    <section id="evolution"><span class="eyebrow">02 / Chronological engineering history</span>
+    <h2>From a first ray-traced cone to a surveyed landscape.</h2>
+    <p>How did we get from an empty telemetry trace on a virtual display adapter to the verified renderer shown in this report?
+    Across 73 commits and eight major engineering iterations, every leap in visual fidelity came from diagnosing a concrete
+    physical or mathematical root cause — including several dead-ends that had to be openly abandoned.
+    <strong>Click any image below to inspect it in the full-screen lightbox</strong> (use <code>&larr;</code> and <code>&rarr;</code>
+    to step chronologically across the entire evolution).</p>
+    <h3>Six-stage visual progression across the project lifecycle</h3>
+    <div class="evo-strip"><figure><span class="label before">Stage I / Oct 21</span><img loading="lazy" src="assets/44d390299d1913bdee46e187.jpg" alt="First V710 ray-traced frame with procedural green cone trees"><figcaption>1. First V710 ray-traced frame (98e9116 -> 609a8f1): procedural cone trees, flat road ribbon, first wet-rut ray query.</figcaption></figure><figure><span class="label milestone">Stage II / Oct 22</span><img loading="lazy" src="assets/0f6c0b712f8fc00ebb9c3a5c.jpg" alt="260,000-strand Cubic-Bezier hair-ribbon grass carpet"><figcaption>2. Hair-system grass revolution (55f525d): 260,000 Cubic-Bezier strands (1.82M verts) with Kajiya-Kay & Marschner backlighting.</figcaption></figure><figure><span class="label deadend">Stage III / Oct 22</span><img loading="lazy" src="assets/45f6bdb362801a48fb54789c.jpg" alt="Raw Poly Haven 3D tree import showing bare brown sticks"><figcaption>3. The 'bare brown sticks' crisis: raw 3D tree import lost 97.5% canopy area and mip-bled alpha cards to black.</figcaption></figure><figure><span class="label milestone">Stage IV / Oct 23</span><img loading="lazy" src="assets/708f4dcb9024fc843661b873.jpg" alt="4.10M-triangle 8-species botanical bundle uhp7"><figcaption>4. 4.10M-triangle botanical bundle (2ff3a0d): connected-component cluster scaling, alpha=255 dilation, summer chlorophyll.</figcaption></figure><figure><span class="label milestone">Stage V / Oct 23-25</span><img loading="lazy" src="assets/503712ce5ee57c91a1d0a215.jpg" alt="682k-triangle PN-subdivided GR Yaris Rally1 on RTX PRO 6000"><figcaption>5. 682k-tri Curved PN-Triangle GR Yaris Rally1 (5b03395), 8K albedo + 4K normal/ORM atlases, and 15-still forensic blitz.</figcaption></figure><figure><span class="label after">Stage VI / Oct 27-28</span><img loading="lazy" src="assets/8d4f0e8b71961e8bbc9b4254.jpg" alt="Final survey-grounded Elva landscape with metsaserv edge and C2 camera"><figcaption>6. Survey-grounded landscape (edb4b04): Maa-amet/SYKE geodata, 3-tier metsaserv edge, C2 camera, and clip-space stability fix.</figcaption></figure></div>
+    <h3>Summary of the eight engineering chapters</h3>
+    <div class="table-wrap"><table><thead><tr><th>Chapter / Era</th><th>Commits</th><th>Hardware &amp; Core Subsystem</th><th>Diagnostic Bottleneck / Dead-End</th><th>Engineered Solution</th></tr></thead><tbody><tr><td>01 / Origin & Cloud RT</td><td>98e9116 -> 609a8f1</td><td>AMD Radeon Pro V710 (54 RDNA 3 Ray Accelerators)</td><td>3D terrain scans and WRC telemetry are never distributed together; local Hyper-V VM had no hardware GPU.</td><td>Fused 5 open datasets (10 Hz WRC telemetry, 30 Hz UT-ADL RTK-GNSS with EPSG:3301 offset discovery, 1 m LiDAR DTM, Riegl .laz clouds, WMS imagery) and injected gc_11_0_3 firmware into initramfs to bring up Vulkan ray queries.</td></tr><tr><td>02 / 260k-Strand Hair Grass</td><td>55f525d, c02c88e</td><td>OpenGL 4.6 / ModernGL + 6-layer moss shell</td><td>Sparse billboard tufts looked artificial; ModernGL's (LINEAR, NEAREST) texture filter snapped grass along the road every 5.5 m.</td><td>Built a 260,000-strand (1.82M-vertex) Cubic-Bezier hair-ribbon groom in a rolling 92 m window with Kajiya-Kay + Marschner shading, 54,000 3D gravel pebbles, and explicit 32-bit float texelFetch spline interpolation.</td></tr><tr><td>03 / Rally Estonia Grounding & Card-Tree Pivot</td><td>ab66786, bbb12a9</td><td>Native 1920x1080 streaming + shadow FBO fix</td><td>glDisable(GL_DEPTH_TEST) prevented shadow_fbo depth writes after frame 0; steering angle was multiplied by 0.075 twice; procedural tree cards looked flat.</td><td>Restored shadow-map depth testing and true Ackermann wheel angles, calibrated against 8 Rally Estonia photos, and pivoted away from procedural tree card atlases to 3D scanned botanical meshes.</td></tr><tr><td>04 / 4.10M-Tri Botanical Bundle</td><td>2ff3a0d</td><td>compile_ultra_highpoly_forest.py (8 species x 3 LODs)</td><td>Raw Poly Haven 3D tree GLTFs rendered as dead brown skeletons ('bare brown sticks').</td><td>Solved 4 compounding causes: topological connected-component cluster scaling, morphological solid-color dilation (alpha=255 on 3D needles), Estonian summer chlorophyll re-grading (G/R = 1.30), and lower canopy skirts.</td></tr><tr><td>05 / Golden Hour, 682k Yaris & Blackwell</td><td>a2aacbf -> 3beb128</td><td>V710 -> A100 -> NVIDIA RTX PRO 6000 Blackwell</td><td>Fixed world-space sun pointed from behind the camera on north-west stages; 231k car mesh had faceted arches; V710 hit Hyper-V SR-IOV VF timeout (-110).</td><td>Switched to corridor-relative cross-lighting (54 deg azimuth, 13.6 deg elevation) with 3D ray-locked shafts, subdivided the GR Yaris Rally1 to 682,182 curved PN-triangles with native 8K/4K atlases, and migrated to RTX PRO 6000.</td></tr><tr><td>06 / 15-Still Forensic Audit (RCA-1..8)</td><td>c665256 -> a0b2a0a</td><td>6 parallel engineering threads</td><td>120 px carEllip UV smear; 50% f_tris[::2] rival car decimation; barns buried to their eaves in 1.8x terrain; crystalline pebbles; low banded clouds.</td><td>Implemented 12-pass 3D wheel shutter blur, Kevlar wheel liners, UE5 Landmass-style graded building pads, spring-damper camera prop avoidance, two-phase dust + Weber V-curtain water spray, and crown-first 3D Perlin-Worley cumulus clouds at 1.45 km LCL.</td></tr><tr><td>07 / Broadcast Director & Shadow-Floor Calibration</td><td>89c9388 -> 63cbb26</td><td>6-shot camera director + exclusive stream sessions</td><td>Full 3D tree shadow maps (FOREST_SHADOW_VERT_SHADER) stacked with Option C's 0.03 ambient shadow floor, crushing forest interiors to ink-black.</td><td>Re-engineered terrain/foliage/road shadow floors with open Baltic blue sky-fill, warm bounce, and self-shadow lift while preserving Option C golden-hour contrast and exclusive stream-session ownership.</td></tr><tr><td>08 / Survey-Grounded Landscapes & Temporal Stability</td><td>edb4b04</td><td>Maa-amet 1 m + ETAK + SYKE 2 m + Metsakeskus + C2 camera</td><td>All four stages still looked like the same uniform green tunnel; 345 m vertex teleportation to vec4(2,2,2,1) caused sky gashes and paused-frame flicker (max diff 105).</td><td>Built stage-specific national geodata fields, 3-tier Estonian metsaserv edges, frustum-first LOD selection, anticipatory C2 crown-clearance cameras, and proper GPU frustum clipping (paused max diff 105 -> 1).</td></tr></tbody></table></div>
+    
+    <article class="evo-chapter" id="evo-ch1">
+      <header>
+        <div class="evo-meta"><span>Chapter 01</span><span>Commits 98e9116 &rarr; 609a8f1</span><span>AMD Radeon Pro V710 MxGPU (54 RDNA 3 Ray Accelerators)</span></div>
+        <h3>Origin: Fusing Five Disconnected Open Datasets &amp; First Cloud Hardware Ray-Tracing Bring-Up</h3>
+      </header>
+      <p>The project began from a fundamental data gap: high-resolution 3D terrain scans and competitive WRC rally
+      telemetry are never published together. To build a physically grounded 3D Digital Twin for Toyota GAZOO Racing
+      (<code>TGR-WRT</code>) without proprietary stage packs, we engineered an automated data-fusion pipeline combining
+      five open scientific and government sources:</p>
+      <ul>
+        <li><strong>WRC 10 Hz Merged Telemetry &amp; CUDA Optimal Ghost (<code>#69 Rovanper&auml;</code>, <code>#33 Evans</code>, <code>#00 Optimal</code>):</strong>
+        Synchronized speed, RPM, gear, throttle, brake, steering and 3D GPS traces across <code>SS2/SS5 Elva</code>,
+        <code>SS3/SS6 Neeruti</code>, <code>SS4/SS7 Otep&auml;&auml;</code> and <code>Ruuhim&auml;ki</code>, paired with an offline GPU forward-backward
+        friction-circle optimal-control solver (<code>#00</code>).</li>
+        <li><strong>University of Tartu Autonomous Driving Lab (UT-ADL) 30 Hz RTK-GNSS:</strong> Extracted厘米-accurate
+        trajectories from <code>summer2021-positions.parquet</code> after discovering the exact local-to-L-EST97 coordinate
+        offset (<code>E = 650000 + x</code>, <code>N = 6465000 + y</code> in <code>EPSG:3301</code>).</li>
+        <li><strong>Estonian Land Board (Maa-amet) 1 m Float32 LiDAR DTM &amp; Riegl VQ-1560i LAZ Point Clouds:</strong>
+        Parsed raw 1 m elevation rasters and 2023 airborne laser scanning returns (ground class 2, water class 9, buildings
+        class 6, vegetation classes 3/4/5) alongside 2048&times;2048 WMS aerial orthophotos.</li>
+      </ul>
+      <p>Because the local workstation environment exposed only a virtual <code>Microsoft Hyper-V Video</code> adapter, we
+      provisioned cloud GPU instances (<code>vmCopilotA100</code> and <code>vmCopilotV710</code>). On the <code>AMD Radeon Pro V710</code>,
+      the Linux kernel initially failed to initialize the GPU with <code>missing firmware amdgpu/gc_11_0_3_mes1.bin (error -2)</code>.
+      Injecting the <code>gc_11_0_3</code> firmware suite into initramfs unlocked all <strong>54 RDNA 3 hardware Ray Accelerators</strong>
+      (<code>VK_KHR_acceleration_structure</code> + <code>VK_KHR_ray_query</code>), powering a custom C++/Vulkan ray-query bridge
+      (<code>libv710_vk_rt.so</code>) over a 36,000-triangle terrain/car BLAS. Visually, however, the first live frames were
+      purely geometric: trees were procedural green cones and the road was a simple ribbon.</p>
+      <div class="evo-grid-3">
+        <figure><span class="label before">Ch. 01 / Frame 1</span><img loading="lazy" src="assets/44d390299d1913bdee46e187.jpg" alt="Very first hardware ray-traced frame on AMD Radeon Pro V710"><figcaption>v710_rt_frame1.jpg: The very first hardware ray-traced frame on V710. Procedural green cones for trees, basic terrain ribbon, first wet-rut ray reflection.</figcaption></figure>
+        <figure><span class="label before">Ch. 01 / Chase v2</span><img loading="lazy" src="assets/ee73c71edefacc6f728ee19c.jpg" alt="Early chase view with procedural hills and basic gravel road"><figcaption>v710_chase_v2.jpg: Early telemetry-driven chase camera over the LiDAR relief with simple procedural surface shading.</figcaption></figure>
+        <figure><span class="label before">Ch. 01 / Chase v4</span><img loading="lazy" src="assets/e713b522f17bf646d2b4cc4e.jpg" alt="Early chase view with synthetic puddles and sparse cone/card trees"><figcaption>v710_chase_v4.jpg: Added basic puddle reflections and roadside props, exposing how sparse tufts and cone trees broke realism.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch2">
+      <header>
+        <div class="evo-meta"><span>Chapter 02</span><span>Commits 55f525d, c02c88e, a335de7</span><span>260,000 Strands / 1.82M Vertices + 54k 3D Pebbles</span></div>
+        <h3>The Grass &amp; Micro-Surface Revolution: 260,000 Cubic-Bezier Hair Strands &amp; 32-Bit Spline Interpolation</h3>
+      </header>
+      <blockquote class="evo-quote">&ldquo;I don't like the grass, this is just tufts here and there. We should have something like
+      hair systems&hellip; Which rendering engine are we using actually? Should we switch to unreal or unity?&rdquo;</blockquote>
+      <p>Rather than scattering isolated cross-quad grass tufts (`v710_chase_moss_v1.jpg`), we architected a UE5-Groom /
+      <em>Ghost of Tsushima</em> style <strong>instanced 3D curved Cubic-Bezier hair-ribbon grass system</strong> (while also
+      generating a companion UE5.4 C++/Python project scaffold with Niagara dust and Chaos Vehicle configs):</p>
+      <ul>
+        <li><strong>260,000 Dynamic 7-Vertex Curved Ribbons (<code>1.82M</code> vertices):</strong> Continuously recycled inside a
+        camera-locked 92 m rolling field around the car, with species zones (tall golden-headed <em>Calamagrostis</em> reed grass on
+        outer banks, lush <em>Festuca</em> meadow fescue on ditch slopes, and short <em>Poa pratensis</em> verge turf near the gravel edge).</li>
+        <li><strong>Physical Fiber Shading:</strong> Combined Kajiya-Kay anisotropic longitudinal strand highlights with Marschner
+        backlit subsurface chlorophyll transmission and a 6-layer volumetric moss shell raymarcher on ditch shoulders.</li>
+        <li><strong>The 5.5 m Texture-Filter Snapping Bug:</strong> Early hair-grass renders exhibited periodic step-snapping along the
+        road every <code>5.5 m</code>. Root cause: ModernGL mapped a 2-tuple filter on a 32-bit float road-spline texture to
+        <code>(LINEAR, NEAREST)</code>, disabling hardware linear interpolation! Switching to explicit sub-texel <code>texelFetch</code>
+        linear interpolation in GLSL eliminated the stepping completely. We also added <strong>54,000 instanced 3D gravel pebbles</strong>
+        in a 28 m rolling window.</li>
+      </ul>
+      <div class="evo-grid-4">
+        <figure><span class="label before">Ch. 02 / Before Groom</span><img loading="lazy" src="assets/b3c4ab41107d602ced1d53f6.jpg" alt="Sparse grass tufts before the 260,000-strand hair system"><figcaption>v710_chase_moss_v1.jpg: Before the hair-ribbon system — sparse tufts over a 6-layer moss shader.</figcaption></figure>
+        <figure><span class="label milestone">Ch. 02 / First 260k Groom</span><img loading="lazy" src="assets/fa1b3754b57e72652c97ba6e.jpg" alt="First 260,000-strand Cubic-Bezier hair-grass prototype"><figcaption>v710_hair_chase.jpg: First 260,000-strand Cubic-Bezier hair-grass pass before spline texelFetch and botanical color tuning.</figcaption></figure>
+        <figure><span class="label after">Ch. 02 / Groom v3</span><img loading="lazy" src="assets/0f6c0b712f8fc00ebb9c3a5c.jpg" alt="Calibrated 260,000-strand hair-grass carpet with Kajiya-Kay and Marschner shading"><figcaption>v710_hair_chase_v3.jpg: Calibrated 260,000-strand groom with Kajiya-Kay specular, Marschner backlit translucency, and sub-texel spline interpolation.</figcaption></figure>
+        <figure><span class="label after">Ch. 02 / Low Orbit</span><img loading="lazy" src="assets/7e68b8e1df62c0f29ca12003.jpg" alt="Low-orbit inspection of the 260,000-strand grass carpet and gravel verge"><figcaption>v710_hair_orbit_v4.jpg: Low-orbit inspection showing continuous ditch-to-meadow fiber density.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch3">
+      <header>
+        <div class="evo-meta"><span>Chapter 03</span><span>Commits ab66786, bbb12a9</span><span>Native 1080p + Shadow FBO Fix + Procedural Tree Pivot</span></div>
+        <h3>Ground-Truth Rally Estonia Calibration, Depth-Buffer Shadow Fix &amp; The Procedural Tree Dead-End</h3>
+      </header>
+      <blockquote class="evo-quote">&ldquo;ok stop, this is a dead end. do extensive research first to see best practices in generating
+      procedural trees, failing that, just download very high poly tree models that fit&hellip; abandon these generated trees, they look terrible.&rdquo;</blockquote>
+      <p>With the grass carpet working, we audited the renderer against eight real WRC Rally Estonia photographs from
+      Otep&auml;&auml;, Elva and Tartu, upgraded the live stream pipeline from 720p to native <code>1920&times;1080</code> (<code>bbb12a9</code>),
+      and uncovered two critical rendering bugs:</p>
+      <ul>
+        <li><strong>Missing Real 3D Shadows after Frame 0:</strong> Calling <code>glDisable(GL_DEPTH_TEST)</code> at the end of
+        <code>render_frame</code> left depth testing disabled when the next frame's <code>shadow_fbo</code> pass began. Because
+        OpenGL suppresses depth-buffer writes whenever <code>GL_DEPTH_TEST</code> is disabled, the 2048&times;2048 shadow map stayed
+        frozen at <code>1.0</code> after frame 0, leaving only a rectangular analytic <code>traceCarBox</code> proxy under the car!</li>
+        <li><strong>Double-Attenuated Ackermann Steering (<code>0.075 &times; 0.075</code>):</strong> Steering wheel angle was multiplied
+        by <code>0.075</code> both during telemetry ingestion and inside <code>render_frame</code>, reducing a 25&deg; wheel lock to an
+        imperceptible <code>0.3&deg;</code>.</li>
+        <li><strong>The Procedural Tree Card-Atlas Dead-End:</strong> We built a 5-column procedural tree atlas
+        (<code>baltic_3d_tree_atlas_v6</code>) with normal-mapped bark and foliage cards (`v710_v6_low_orbit_trees.jpg`). Under close
+        orbit inspection, intersecting alpha cards still read as flat paper cutouts. Following the user's pivot, we abandoned
+        procedural card trees entirely in favor of real 3D botanical geometry.</li>
+      </ul>
+      <div class="pair">
+        <figure><span class="label milestone">Ch. 03 / Palette & Shadow Fix</span><img loading="lazy" src="assets/4c69bdd03b9b23fad7d531d4.jpg" alt="Rally Estonia palette calibration and restored shadow FBO depth writes"><figcaption>v710_estonia_ultra_chase.jpg: Restored shadow_fbo depth writes and limestone/sand gravel grading, still limited by procedural trees.</figcaption></figure>
+        <figure><span class="label deadend">Ch. 03 / Procedural Tree Dead-End</span><img loading="lazy" src="assets/6e230ed357a7ad99813e3bbb.jpg" alt="Low-orbit view of the procedural v6 tree card atlas that was abandoned"><figcaption>v710_v6_low_orbit_trees.jpg: The procedural v6 card-atlas dead-end that prompted the pivot to real 3D scanned botanical meshes.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch4">
+      <header>
+        <div class="evo-meta"><span>Chapter 04</span><span>Commit 2ff3a0d</span><span>4.10M Triangles / 8 Species &times; 3 LODs</span></div>
+        <h3>From &ldquo;Bare Brown Sticks&rdquo; to the 4.10M-Triangle 8-Species Botanical Bundle</h3>
+      </header>
+      <p>When we first imported raw 3D tree GLTF models from Poly Haven (`v710_ph3d_chase.jpg` and `v710_ph3d_forest_orbit.jpg`),
+      the result was a visual shock: the trees rendered as dead, skeletal brown sticks. A four-part forensic diagnosis
+      revealed why naive 3D plant imports fail at rally viewing distances:</p>
+      <ol>
+        <li><strong>97.5% Canopy Surface-Area Loss from Uncompensated Subsampling:</strong> The source conifer scans modeled
+        <code>4.14M</code> individual <code>1 cm &times; 2 mm</code> 3D needles (<code>148 m&sup2;</code> total needle area). Subsampling to
+        <code>100k</code> triangles without scaling up the surviving needle clusters reduced canopy area to <code>3.6 m&sup2;</code>!</li>
+        <li><strong>75% Alpha-Card Knockout &amp; Black Mip-Bleeding on 3D Needles:</strong> A twig-card alpha texture (75% transparent
+        <code>[0,0,0,0]</code> pixels) was bound to <em>already-3D-modeled</em> individual needles and leaves. Worse, trilinear mipmapping
+        averaged the transparent <code>[0,0,0,0]</code> background into the needle RGB texels (`mean_rgb = [27, 27, 15]`), turning
+        surviving foliage pitch-black at distance.</li>
+        <li><strong>Dry South African Scan Albedo:</strong> The raw scans had drought-brown foliage (<code>R &gt; G</code>,
+        <code>[101, 98, 46]</code>) instead of lush July Estonian chlorophyll (<code>G/R = 1.30</code>).</li>
+        <li><strong>Missing Lower Canopy Skirts:</strong> High-branching scans had no foliage below <code>y = 0.45</code>, leaving an
+        empty trunk hallway at the <code>2.8 m</code> chase-camera eye height.</li>
+      </ol>
+      <p>We built <code>scripts/compile_ultra_highpoly_forest.py</code> to compile 13 Poly Haven botanical scans into an
+      <strong>8-species &times; 3-LOD runtime bundle (<code>4.10M</code> LOD0 triangles, <code>2,068,548</code> vertices)</strong>:
+      finding exact topological needle/leaf clusters via <code>scipy.sparse.csgraph.connected_components</code> and scaling each
+      cluster around its 3D centroid, forcing <code>alpha = 255</code> with 5-pass morphological solid-color dilation, re-grading
+      foliage to Estonian summer chlorophyll, and grafting lower canopy skirts (`uhp` v1 &rarr; v3 &rarr; v7).</p>
+      <div class="evo-grid-3">
+        <figure><span class="label deadend">Ch. 04 / Raw Import Failure</span><img loading="lazy" src="assets/45f6bdb362801a48fb54789c.jpg" alt="Initial Poly Haven 3D tree import rendering as bare brown sticks"><figcaption>v710_ph3d_chase.jpg: Initial raw 3D tree import — 97.5% needle area loss + black alpha-mip bleeding produced 'bare brown sticks'.</figcaption></figure>
+        <figure><span class="label deadend">Ch. 04 / Skeletal Orbit</span><img loading="lazy" src="assets/d29105dd39f864a503131145.jpg" alt="Orbit view of the bare brown stick failure before cluster scaling"><figcaption>v710_ph3d_forest_orbit.jpg: Orbit inspection confirming that unscaled 1 cm 3D needles vanish below 1 pixel at 25 m.</figcaption></figure>
+        <figure><span class="label milestone">Ch. 04 / UHP v1</span><img loading="lazy" src="assets/41d7a37b39d2e41297f888d4.jpg" alt="First UHP pass with connected-component cluster scaling"><figcaption>v710_uhp_chase.jpg: First connected-component cluster scaling pass (uhp v1) restoring crown volume.</figcaption></figure>
+        <figure><span class="label milestone">Ch. 04 / UHP v3</span><img loading="lazy" src="assets/0d3edbe2e85d5a7850dca523.jpg" alt="Mid-iteration UHP v3 with alpha dilation and summer chlorophyll"><figcaption>v710_uhp3_chase.jpg: UHP v3 after morphological solid-color dilation (alpha=255) and Estonian summer chlorophyll grading.</figcaption></figure>
+        <figure><span class="label after">Ch. 04 / UHP v7 Final Bundle</span><img loading="lazy" src="assets/708f4dcb9024fc843661b873.jpg" alt="Completed 4.10M-triangle 8-species botanical bundle uhp7"><figcaption>v710_uhp7_chase.jpg: Completed 4.10M-triangle 8-species botanical bundle (uhp7) with full lower canopy skirts.</figcaption></figure>
+        <figure><span class="label after">Ch. 04 / UHP v7 Close-Up</span><img loading="lazy" src="assets/518b436bd9ccd0b383189dcd.jpg" alt="Close-up of UHP v7 foliage and roadside straw bale"><figcaption>v710_uhp7_bale_closeup.jpg: Close-up verification of uhp7 needle/leaf cluster density and roadside bale detail.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch5">
+      <header>
+        <div class="evo-meta"><span>Chapter 05</span><span>Commits a2aacbf &rarr; 3beb128</span><span>682,182-Tri GR Yaris Rally1 + RTX PRO 6000 Blackwell</span></div>
+        <h3>Nordic Golden Hour, 682k-Triangle PN-Subdivided GR Yaris Rally1 &amp; Cloud GPU Migration</h3>
+      </header>
+      <p>Next we tackled atmospheric lighting, hero vehicle fidelity, and cloud GPU resilience:</p>
+      <ul>
+        <li><strong>Corridor-Relative Nordic Golden Hour (<code>a2aacbf</code>):</strong> A fixed world-space sun vector
+        (<code>[-0.64, 0.25, -0.73]</code>) pointed <em>from behind the camera</em> on north-west stages (<code>dot(fwd, sun_dir) = -0.35</code>),
+        eliminating Henyey-Greenstein forward scattering in dust and foliage translucency. Switching to a stage-corridor-relative
+        low sun (<code>54&deg;</code> cross-track azimuth, <code>13.6&deg;</code> elevation, <code>3800K</code> amber key against <code>7500K</code>
+        zenith sky fill) and 3D ray-locked canopy shafts (projecting world points along the sun vector to canopy height
+        <code>14.5 m</code>) restored dramatic golden side-rim lighting across all four stages.</li>
+        <li><strong>682,182-Triangle Curved PN-Triangle GR Yaris Rally1 (<code>5b03395</code>):</strong> We replaced the 231k-triangle car
+        mesh and downscaled 4K diffuse atlas with crack-free edge-welded <strong>Curved PN-Triangle subdivision (<code>682,182</code> triangles)</strong>
+        and a native 1:1 <code>8192&times;8192</code> Albedo + <code>4096&times;4096</code> Tangent-Space Normal + <code>4096&times;4096</code> Packed ORM
+        material pipeline with dual-lobe carbon-weave clearcoat and micro-flake metallic paint.</li>
+        <li><strong>Hardware Migration to NVIDIA RTX PRO 6000 Blackwell (<code>5276d92</code>, <code>3beb128</code>):</strong> When
+        <code>vmCopilotV710</code> suffered a hypervisor SR-IOV VF PCIe reset timeout (<code>error -110</code>), we built the dual-backend
+        <code>a100_renderer.py</code> / <code>v710_renderer.py</code> parity architecture and migrated onto <strong>NVIDIA RTX PRO 6000 Blackwell</strong>
+        with hardware 10-bit AV1 NVENC and WebCodecs low-latency streaming.</li>
+      </ul>
+      <div class="evo-grid-4">
+        <figure><span class="label milestone">Ch. 05 / Golden Hour Shafts</span><img loading="lazy" src="assets/0a869f8f0c086f7a386ed796.jpg" alt="Corridor-relative 54-degree Golden Hour cross-lighting and 3D ray-locked canopy shafts"><figcaption>v710_lumen2_chase.jpg: Corridor-relative 54 deg Golden Hour cross-lighting with 3D ray-locked canopy light shafts.</figcaption></figure>
+        <figure><span class="label milestone">Ch. 05 / A100 Parity Bring-Up</span><img loading="lazy" src="assets/acf19de4545d18f0e4022c27.jpg" alt="Three-quarter hero view on NVIDIA A100 during cloud GPU migration"><figcaption>a100_lumen_quarter.jpg: Three-quarter hero view on NVIDIA A100 validating cross-vendor renderer parity.</figcaption></figure>
+        <figure><span class="label after">Ch. 05 / 682k Yaris Hero</span><img loading="lazy" src="assets/503712ce5ee57c91a1d0a215.jpg" alt="682,182-triangle Curved PN-Subdivided GR Yaris Rally1 with native 8K albedo atlas"><figcaption>rtx6000_682k_front_quarter.jpg: 682,182-triangle Curved PN-Subdivided GR Yaris Rally1 with native 8K albedo + 4K normal/ORM atlases on RTX PRO 6000 Blackwell.</figcaption></figure>
+        <figure><span class="label after">Ch. 05 / 682k Front Orbit</span><img loading="lazy" src="assets/1db219d1e792955d07e82d39.jpg" alt="Front orbit view of the 682k-triangle GR Yaris Rally1"><figcaption>rtx6000_682k_orbit_front.jpg: Close front-orbit view showing smooth PN-subdivided wheel arches, livery crispness, and 3D rotational wheel blur.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch6">
+      <header>
+        <div class="evo-meta"><span>Chapter 06</span><span>Commits c665256 &rarr; a0b2a0a</span><span>15-Still Forensic Audit &amp; 6 Parallel Engineering Threads</span></div>
+        <h3>The 15-Still Forensic Audit (RCA-1..8): Cars, Graded Farmstead Pads, Props, Hydrodynamics &amp; Cumulus Sky</h3>
+      </header>
+      <p>Instead of judging quality from a single flattering chase angle, we captured a 15-still forensic matrix covering
+      pack races, close-up wheel wells, rural buildings, roadside props, dry gravel roost, puddle splashes and sky horizons,
+      then dispatched six parallel engineering workstreams to eliminate every artifact:</p>
+      <ul>
+        <li><strong>RCA-1..4 — Car Motion Smear, Rival Mesh Integrity &amp; 12-Pass 3D Wheel Blur (<code>69d7330</code>, <code>13cfd20</code>):</strong>
+        Removed the hardcoded screen-space UV ellipse (<code>carEllip</code>) that smeared close-up and pack cars by 120 px; removed
+        <code>f_tris[::2]</code> 50% triangle deletion on rival cars <code>#33</code> and <code>#00</code>; corrected tire ground-contact heights
+        and added radial contact-patch sidewall bulge; enclosed hollow wheel arches with 3D Kevlar liners; and implemented 12-pass 3D
+        rotational shutter accumulation for spinning wheels.</li>
+        <li><strong>RCA-5 — Graded Farmstead Pads &amp; Rural Photogrammetry (<code>054534f</code>, <code>b617736</code>):</strong>
+        Because terrain relief used a <code>1.8&times;</code> vertical exaggeration, a 14 m wide barn placed on a 12&deg; hillside had a
+        <code>5.3 m</code> elevation delta across its footprint — burying the uphill wall to its eaves (`topic2_08_barn_elva_t77.20.jpg`).
+        We implemented UE5 Landmass-style smoothstep foundation pad grading in <code>_build_stage</code> plus scanned rural buildings (`B1..B6`).</li>
+        <li><strong>RCA-7 — Camera Prop Avoidance, White LLDPE Silage Bales, Catenary Banners &amp; Oblate Pebbles (<code>526c405</code>):</strong>
+        Added spring-damper camera prop collision repulsion, replaced orange cylinders with white LLDPE-wrapped silage bales and birch
+        marker stakes, added sagged 3D catenary stage banners, and flattened jagged crystalline gravel into oblate river pebbles.</li>
+        <li><strong>RCA-6 &amp; RCA-8 — Two-Phase Dust, Weber-Breakup Water Spray &amp; Crown-First 3D Cumulus Clouds (<code>6a307e2</code>, <code>e741743</code>, <code>9015b73</code>):</strong>
+        Separated ballistic gravel roost from translucent Beer-Lambert silt wakes, built a dedicated hydrodynamic V-curtain liquid sheet
+        shader for puddle splashes, and replaced low horizon-hugging cloud bands with a crown-first (<code>hFrac = 1.0 - s</code>) 3D
+        Perlin-Worley cumulus layer at the <code>1.45 km</code> Estonian summer lifting condensation level.</li>
+      </ul>
+      <div class="pair">
+        <figure><span class="label deadend">Ch. 06 / RCA-5 Before (Buried Barn)</span><img loading="lazy" src="assets/cad75bfddd96d7232212a099.jpg" alt="Barn buried up to its roof eaves in ungraded 1.8x exaggerated hillside"><figcaption>topic2_08_barn_elva_t77.20.jpg: Before pad grading — 1.8x terrain slope buried the uphill wall of the barn up to its roof eaves.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / RCA-5 After (Graded Pad)</span><img loading="lazy" src="assets/c7b0a126c2bca8deb1a4ecdf.jpg" alt="Barn sitting cleanly on a UE5 Landmass-style graded level building pad"><figcaption>after_08_barn_elva_t77.20.jpg: After UE5 Landmass-style smoothstep foundation pad grading and gravel apron blending.</figcaption></figure>
+      </div>
+      <div class="evo-grid-4">
+        <figure><span class="label after">Ch. 06 / RCA-7a Camera Collision Fix</span><img loading="lazy" src="assets/3db2da5644eb18465d48ad89.jpg" alt="Before and after spring-damper camera prop collision avoidance"><figcaption>topic4_rca7a_camera_collision_before_after.png: Spring-damper camera repulsion prevents roadside banners and stakes from clipping the lens.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / RCA-7b White LLDPE Bales</span><img loading="lazy" src="assets/ed37f02412c61db3a9e9c0ed.jpg" alt="White LLDPE wrapped silage bales and birch marker stakes"><figcaption>topic4_rca7b_white_lldpe_bales_stakes.png: Authentic Baltic white stretch-film (LLDPE) silage bales and painted birch marker stakes.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / RCA-7c Catenary Banners</span><img loading="lazy" src="assets/9bc0326eb471aed4a64cec43.jpg" alt="3D catenary rally banners with wind sag and wooden stakes"><figcaption>topic4_rca7c_catenary_banner_wooden_stakes.png: Subdivided 3D catenary banner geometry with natural gravity sag and wooden support stakes.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / RCA-7d Oblate Pebbles</span><img loading="lazy" src="assets/0dcbdf6d3b2ba4e973ee63e1.jpg" alt="Oblate water-worn gravel pebbles replacing sharp crystalline shards"><figcaption>topic4_rca7d_oblate_pebbles_validation.png: Oblate spheroid scaling + bottom-hemisphere normal clamping eliminates sharp crystalline facets.</figcaption></figure>
+      </div>
+      <div class="evo-grid-3">
+        <figure><span class="label after">Ch. 06 / Two-Phase Gravel Dust</span><img loading="lazy" src="assets/f646e34f2f8cd4dee427bf5a.jpg" alt="Two-phase ballistic gravel roost and translucent Beer-Lambert silt wake"><figcaption>after_12_particles_dry_dust_fast_t10.35.jpg: Two-phase dry dust — dark ballistic gravel roost at the tire contact patch + backlit silt aerosol wake.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / Hydrodynamic Water Spray</span><img loading="lazy" src="assets/d246fd7c7e4a0597d784c163.jpg" alt="Weber-breakup hydrodynamic V-curtain puddle splash in chase view"><figcaption>after_14_particles_water_splash_chase_t13.31.jpg: Hydrodynamic V-curtain liquid sheet shader with Fresnel sky reflection and Mie mist.</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / Water Splash Close-Up</span><img loading="lazy" src="assets/c151b55a758aa417f553327b.jpg" alt="Close-up of Weber-breakup water spray and ligament breakup"><figcaption>after_15_particles_water_splash_closeup_t10.95.jpg: Close-up showing liquid core, ligament breakup, and bounded brake-light scatter.</figcaption></figure>
+      </div>
+      <div class="pair" style="margin-top:16px">
+        <figure><span class="label after">Ch. 06 / Cumulus Sky (Noon)</span><img loading="lazy" src="assets/d9cde2debf71470def5e3384.jpg" alt="Crown-first 3D Perlin-Worley cumulus sky-dome at noon"><figcaption>cumulus_verify_01_noon.jpg: Crown-first 3D Perlin-Worley cumulus clouds at 1.45 km LCL with silver-lining phase scattering (noon).</figcaption></figure>
+        <figure><span class="label after">Ch. 06 / Cumulus Sky (Golden Hour)</span><img loading="lazy" src="assets/60cd740cc9eb19b848d9361b.jpg" alt="Crown-first 3D Perlin-Worley cumulus sky-dome at golden hour"><figcaption>cumulus_verify_06_golden.jpg: Same 3D volumetric cumulus dome under low-angle golden-hour cross-lighting.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch7">
+      <header>
+        <div class="evo-meta"><span>Chapter 07</span><span>Commits 89c9388 &rarr; 63cbb26</span><span>Broadcast Director + Stream Ownership + Shadow-Floor Fix</span></div>
+        <h3>Broadcast Camera Director, Exclusive Stream Ownership &amp; Fixing the Ink-Black Shadow Regression</h3>
+      </header>
+      <p>As the live viewer matured with a 6-shot broadcast camera director, pursuit-drone aerodynamics
+      (<code>7fa3d50</code>, <code>641e666</code>), 10 Hz mistake-zone telemetry overlays (<code>079ac4e</code>), and single-owner stream
+      session protection (<code>09c4dfa</code>), a subtle lighting interaction appeared when we restored the dramatic
+      <strong>Option C Cinema Golden-Hour Contrast</strong> preset (<code>567ea12</code>):</p>
+      <ul>
+        <li><strong>Why Shadows Turned Ink-Black (`05_current_black_shadows_chase_t12.jpg`):</strong> When Option C was first tuned,
+        only the car wrote to <code>shadow_fbo</code>. Later, full 3D tree shadow casting (<code>FOREST_SHADOW_VERT_SHADER</code>) was
+        enabled across the 170 m ortho shadow cascades. Stacking real 3D tree shadow maps with Option C's <code>0.03</code> terrain shadow
+        floor, <code>0.20</code> AO floor, and <code>1.15</code> ACES power curve multiplied shadowed terrain down to <code>0.6%</code>
+        albedo before ACES crushed it to pure black!</li>
+        <li><strong>Open Sky-Fill Shadow Calibration (<code>63cbb26</code>):</strong> We decoupled shadowed sky-dome diffuse irradiance
+        from direct sun occlusion — lifting the terrain shadow floor to <code>0.22</code>, adding Baltic blue sky-fill
+        (<code>vec3(0.055, 0.068, 0.082)</code>) and warm ground bounce in shadowed foliage, and relaxing ACES shadow toe compression
+        (`06_fixed_open_shadows_chase_t12.jpg`).</li>
+      </ul>
+      <div class="evo-grid-3">
+        <figure><span class="label before">Ch. 07 / Pre-Option C Baseline</span><img loading="lazy" src="assets/dbfbe9351fd3190428ac32b6.jpg" alt="Flat daylight baseline before Option C golden-hour restoration"><figcaption>00_baseline_chase_t12.jpg: Earlier flat daylight baseline before restoring Option C Cinema Golden-Hour contrast.</figcaption></figure>
+        <figure><span class="label deadend">Ch. 07 / Ink-Black Shadow Regression</span><img loading="lazy" src="assets/61bcba1fe43ce1f0225890f4.jpg" alt="Crushed ink-black shadows when 3D tree shadow maps stacked with 0.03 shadow floor"><figcaption>05_current_black_shadows_chase_t12.jpg: Regression when full 3D tree shadow maps stacked with Option C's 0.03 shadow floor.</figcaption></figure>
+        <figure><span class="label after">Ch. 07 / Calibrated Open Shadows</span><img loading="lazy" src="assets/f424e659216767d92245457d.jpg" alt="Calibrated open sky-fill shadows preserving golden-hour contrast and bark/gravel detail"><figcaption>06_fixed_open_shadows_chase_t12.jpg: Calibrated open sky-fill shadow floor (63cbb26) preserving both golden-hour drama and shadow detail.</figcaption></figure>
+      </div>
+    </article>
+    <article class="evo-chapter" id="evo-ch8">
+      <header>
+        <div class="evo-meta"><span>Chapter 08</span><span>Commit edb4b04</span><span>Maa-amet 1 m + ETAK + SYKE 2 m + Mets&auml;keskus + C2 Camera</span></div>
+        <h3>Breaking the &ldquo;Procedural Corridor&rdquo;: Survey-Grounded Landscapes, Metsaserv Edges &amp; Temporal Stability</h3>
+      </header>
+      <p>Even with 4.10M-triangle scanned trees, 260k-strand grass, a 682k-triangle car and golden-hour lighting, all four rally stages
+      still looked like the same uniform green tunnel. Our final investigation — documented in full detail across Sections 03 through 10
+      of this report — traced that homogeneity to six structural root causes in <code>_build_forest_mesh</code> and the vertex shaders:</p>
+      <ol>
+        <li><strong>Unused Real Geodata:</strong> <code>_build_forest_mesh</code> ignored LiDAR canopy heights and orthophotos, driving all
+        four stages with the same 1D trigonometric wave <code>_eval_biome_openness(s_m, side)</code>.</li>
+        <li><strong>Savanna Thinning vs. Binary Stand Mosaic:</strong> Dropping trees via independent Bernoulli trials
+        (<code>prob = base_prob * (1 - openness * 0.85)</code>) turned closed forests into sparse golf-course savannas instead of alternating
+        between 100% open agricultural meadows and tight, closed-canopy stands.</li>
+        <li><strong>The <code>w_s</code> Crown-Width Illusion:</strong> Height-normalized conifer meshes have a model-space radius of only
+        <code>0.13..0.25</code> units, making their true world-space crowns 4&times; narrower than nominal <code>w_s</code> assumed.</li>
+        <li><strong>Missing 3-Tier Estonian <em>Metsaserv</em> (Forest Edge):</strong> Real hemiboreal stand boundaries seal the lower
+        <code>0&ndash;10 m</code> with a continuous curtain of ditch ferns/shrubs (skirt), grey alder/hazel/willow saplings (mantle), and
+        interlocking pine/spruce/birch crowns (overstory).</li>
+        <li><strong>Post-Slice Frustum Culling &amp; Distant Component Thinning:</strong> Slicing <code>[:n2]</code> before frustum culling let
+        off-screen trees consume half the visible quota, while <code>fol_all[::2]</code> / <code>fol_all[::4]</code> thinned distant crowns.</li>
+        <li><strong>The 345 m Connected-Mesh Clip-Space Teleportation Bug:</strong> Moving individual vertices beyond 345 m to
+        <code>gl_Position = vec4(2.0, 2.0, 2.0, 1.0)</code> stretched boundary triangles across the screen and caused paused-frame flicker
+        (<code>max diff 105 &rarr; 1</code> after restoring hardware frustum clipping and <code>1.0</code> far sky depth).</li>
+      </ol>
+      <p>The rest of this report presents the complete geospatial data pipeline, engineering implementation, 54 matched still pairs,
+      and 26 five-second 1080p/30 FPS motion clips proving Chapter 08 in detail.</p>
+    </article>
+    </section>
+    <section id="grounding"><span class="eyebrow">03 / Grounding & corrections</span><h2>Use the actual products, not their preview colours.</h2>
     <p>The most consequential correction to the proposal was to stop treating <code>*_ndsm.jpg</code> as a
     calibrated metre-scale height raster. A plausible grayscale or coloured height preview does not establish
     its scale, no-data convention, legend, acquisition date or accuracy. The implementation downloads and
@@ -133,7 +451,7 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
     <p class="fine">Data coverage above means finite numeric/classified samples within the specified belt.
     It is not a survey-accuracy score, a count of individual crowns, or a directly comparable denominator
     to the old point-cloud station-coverage audit.</p></section>
-    <section id="system"><span class="eyebrow">03 / Engineering</span><h2>One world field, shared by the scene.</h2>
+    <section id="system"><span class="eyebrow">04 / Engineering</span><h2>One world field, shared by the scene.</h2>
     <div class="pipeline">
       <div><b>01 / INPUTS</b><p>Numeric terrain and canopy; semantic vectors; Finnish height classes and inventory; existing route and imagery.</p></div>
       <div><b>02 / WORLD FIELD</b><p>Stand footprint, height prior, validity, metric edge distance, land cover, moisture/tint and provenance.</p></div>
@@ -199,7 +517,7 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
     <p>Conservative full crown cylinders can unnecessarily lift the camera above empty space beneath high
     branches. That is a deliberate safety/appearance trade-off, visible in the separately labelled native
     clips. It is not a proof of triangle-level collision freedom or a complete robotics planner.</p></section>
-    <section id="stills"><span class="eyebrow">04 / Fixed-view evidence</span><h2>Same camera. Same time. Changed world.</h2>
+    <section id="stills"><span class="eyebrow">05 / Fixed-view evidence</span><h2>Same camera. Same time. Changed world.</h2>
     <p>These are real GPU captures, not generated after-images or retouched illustrations. Main comparisons
     lock the numeric eye, target, FOV, up vector, grass focus, lighting preset and simulation timestamp.
     Embedded previews are resized JPEGs; the original lossless PNG links retain full output resolution.</p>
@@ -912,7 +1230,7 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
     <figure><span class="eyebrow">check-noon / elva_still1_heli</span><img loading="lazy" src="assets/7a19677d03248245035ea77e.jpg" alt="check-noon lighting smoke view"><figcaption><a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-noon__elva_still1_heli_000.png" target="_blank" rel="noopener">Open original</a></figcaption></figure><figure><span class="eyebrow">check-noon / otepaa_still0_chase</span><img loading="lazy" src="assets/8a9d6deb160f5b38de7e0a21.jpg" alt="check-noon lighting smoke view"><figcaption><a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-noon__otepaa_still0_chase_000.png" target="_blank" rel="noopener">Open original</a></figcaption></figure><figure><span class="eyebrow">check-night / elva_still1_heli</span><img loading="lazy" src="assets/9aed044d06f56cfe9b482278.jpg" alt="check-night lighting smoke view"><figcaption><a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-night__elva_still1_heli_000.png" target="_blank" rel="noopener">Open original</a></figcaption></figure><figure><span class="eyebrow">check-night / otepaa_still0_chase</span><img loading="lazy" src="assets/98071ccf22ff6edbb8873a29.jpg" alt="check-night lighting smoke view"><figcaption><a href="https://github.com/erjadi/tgr-landscape-report/releases/download/media-v1/check-night__otepaa_still0_chase_000.png" target="_blank" rel="noopener">Open original</a></figcaption></figure>
     </div><p class="fine">Same geographic candidate under other existing lighting presets. These are smoke
     checks, not a second lighting redesign or proof of every weather/time combination.</p></details></section>
-    <section id="motion"><span class="eyebrow">05 / Temporal acceptance</span><h2>Still-image quality is not the release gate.</h2>
+    <section id="motion"><span class="eyebrow">06 / Temporal acceptance</span><h2>Still-image quality is not the release gate.</h2>
     <p>Every formal clip has 150 individually rendered output frames at
     <code>t_start + n / 30</code>, 1920 &times; 1080 and constant 30 FPS for five seconds.
     Independent local decoding checks frame count, frame rate and duration. No repeated stills, generated
@@ -988,7 +1306,7 @@ summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:18px}
     was <strong>3</strong>. Camera partition/seek determinism, pause versus cut handling, stable
     instance identity and frustum/buffer behavior are also tested. A finite corpus cannot establish that
     all possible views are artifact-free.</p></section>
-    <section id="performance"><span class="eyebrow">06 / Measured cost</span><h2>Show the price of the better scene.</h2>
+    <section id="performance"><span class="eyebrow">07 / Measured cost</span><h2>Show the price of the better scene.</h2>
     <p>The actual Spain allocation is <strong>NVIDIA RTX Pro 6000 Blackwell DC-2-48Q/PCI/SSE2</strong>. It is a 48 GB vGPU profile,
     not the 24 GB guest used in the older fidelity research and not an assumed full 96 GB physical card.
     More VRAM does not imply free geometry, shading or encoding throughput.</p>
@@ -1023,7 +1341,7 @@ NVIDIA RTX Pro 6000 Blackwell DC-2-48Q, 49152 MiB, 13153 MiB, 595.91.07</pre></d
     <div class="table-wrap"><table><thead><tr><th>JPEG quality</th><th>Frame bytes</th><th>RGB RMSE (0-255)</th><th>RGB MAE (0-255)</th></tr></thead><tbody><tr><td>56</td><td>228,848</td><td>6.120</td><td>4.296</td></tr><tr><td>92</td><td>633,675</td><td>4.116</td><td>2.800</td></tr></tbody></table></div>
     <p class="fine">Compression error is not a temporal stability or photorealism score. The final live
     owned-session check and browser playback verify the actual delivery path separately.</p></section>
-    <section id="limits"><span class="eyebrow">07 / Negative evidence & boundaries</span><h2>What was rejected, qualified or left approximate.</h2>
+    <section id="limits"><span class="eyebrow">08 / Negative evidence & boundaries</span><h2>What was rejected, qualified or left approximate.</h2>
     <div class="grid">
       <article class="ve-card"><h3>Rejected pilot: correct trees, unsafe old camera</h3>
       <p>The first geographic candidate still put an old aerial eye inside a crown. It was not accepted as a
@@ -1080,7 +1398,7 @@ NVIDIA RTX Pro 6000 Blackwell DC-2-48Q, 49152 MiB, 13153 MiB, 595.91.07</pre></d
     the detailed range and the finite mapped-extent/horizon transition remain limitations; no rejected
     canopy sheet is hidden in the final build. No universal photorealism percentage or unmeasured
     sub-millisecond cost is invented.</p></section>
-    <section id="reproduce"><span class="eyebrow">08 / Reproduction & integration</span><h2>Keep the experiment reproducible.</h2>
+    <section id="reproduce"><span class="eyebrow">09 / Reproduction & integration</span><h2>Keep the experiment reproducible.</h2>
     <p>The baseline is the integrated, actually served Spain file bundle, not an assumed single Git revision.
     The completed Option C lighting plus lifted-shadow finish and current stream ownership were preserved.
     Before capture, source was copied and hashed into an immutable isolated baseline. No production source
@@ -1140,7 +1458,7 @@ node --test tests\streaming.test.js
     renderer/shader/helper versions; stream-session ownership stays intact. A rollback source snapshot is
     retained. Live anonymous frame and batch requests must still be rejected, and an owned-session capture
     must decode at native resolution.</p></section>
-    <section id="sources"><span class="eyebrow">09 / Audit trail</span><h2>Sources, manifests and originals.</h2>
+    <section id="sources"><span class="eyebrow">10 / Audit trail</span><h2>Sources, manifests and originals.</h2>
     <p>National geospatial products retain their own attribution and terms. Existing imagery remains subject
     to its separate provider terms; the JPEG alone does not establish provider or acquisition vintage.
     Poly Haven-derived scene assets retain their existing licensing. No third-party rally reference
@@ -1868,4 +2186,191 @@ function playPair(id='wind-pair'){
   document.getElementById('play-status').textContent='Use the built-in controls if paired playback is blocked.';
  });
 }
+
+(function(){
+ const figures=Array.from(document.querySelectorAll('figure')).filter(f=>f.querySelector('img'));
+ figures.forEach(f=>{
+  const img=f.querySelector('img');
+  if(!img)return;
+  img.tabIndex=0;
+  img.setAttribute('role','button');
+  if(!img.title)img.title='Click to open in full-screen lightbox';
+  if(!f.querySelector('.zoom-badge')){
+   const b=document.createElement('span');
+   b.className='zoom-badge';
+   b.setAttribute('aria-hidden','true');
+   b.textContent='Full screen';
+   f.appendChild(b);
+  }
+ });
+ const lb=document.createElement('div');
+ lb.id='lightbox';
+ lb.className='lightbox';
+ lb.hidden=true;
+ lb.setAttribute('role','dialog');
+ lb.setAttribute('aria-modal','true');
+ lb.setAttribute('aria-label','Full-screen image viewer');
+ lb.innerHTML=`
+  <div class="lb-bar">
+   <div class="lb-meta">
+    <span class="lb-counter" id="lb-counter">1 / 1</span>
+    <span class="lb-title" id="lb-title"></span>
+   </div>
+   <div class="lb-actions">
+    <button type="button" id="lb-zoom-out" title="Zoom out (-)">&#8722;</button>
+    <button type="button" id="lb-zoom-reset" title="Reset zoom (0)">100%</button>
+    <button type="button" id="lb-zoom-in" title="Zoom in (+)">+</button>
+    <button type="button" id="lb-fullscreen" title="Toggle monitor fullscreen (F)">Fullscreen</button>
+    <a id="lb-original" target="_blank" rel="noopener" hidden>Lossless PNG &#8599;</a>
+    <button type="button" id="lb-close" title="Close viewer (Esc)">Close &times;</button>
+   </div>
+  </div>
+  <div class="lb-stage" id="lb-stage">
+   <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Previous image">&#8592;</button>
+   <img class="lb-img" id="lb-img" alt="">
+   <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Next image">&#8594;</button>
+  </div>
+  <div class="lb-foot">
+   <div class="lb-caption" id="lb-caption"></div>
+   <div class="lb-hint">Keys: &#8592;/&#8594; prev/next &middot; +/-/0 zoom &middot; F fullscreen &middot; Esc close &middot; Double-click or wheel to zoom</div>
+  </div>`;
+ document.body.appendChild(lb);
+
+ const stage=document.getElementById('lb-stage');
+ const lbImg=document.getElementById('lb-img');
+ const lbCounter=document.getElementById('lb-counter');
+ const lbTitle=document.getElementById('lb-title');
+ const lbCaption=document.getElementById('lb-caption');
+ const lbOrig=document.getElementById('lb-original');
+ const btnReset=document.getElementById('lb-zoom-reset');
+
+ let activeList=[];
+ let activeIndex=0;
+ let scale=1,panX=0,panY=0,dragging=false,startX=0,startY=0;
+ let lastTrigger=null;
+
+ function applyTransform(){
+  lbImg.style.transform=`translate(${panX}px,${panY}px) scale(${scale})`;
+  btnReset.textContent=Math.round(scale*100)+'%';
+  stage.classList.toggle('zoomed',scale>1.01);
+ }
+ function setZoom(nextScale){
+  scale=Math.max(1,Math.min(5,nextScale));
+  if(scale<=1.01){panX=0;panY=0;}
+  applyTransform();
+ }
+ function getNavigableImages(seedImg){
+  const all=Array.from(document.querySelectorAll('figure img'));
+  return all.filter(img=>img.offsetParent!==null||img===seedImg);
+ }
+ function describeImage(img){
+  const fig=img.closest('figure');
+  const badge=fig?fig.querySelector('.label,.eyebrow'):null;
+  const card=img.closest('.comparison,.evo-chapter,.ve-card,section');
+  const heading=card?card.querySelector('h3,h2'):null;
+  const cap=fig?fig.querySelector('figcaption'):null;
+  const link=cap?cap.querySelector('a[href]'):null;
+  return {
+   badge:badge?badge.textContent.trim():'',
+   heading:heading?heading.textContent.trim():(img.alt||'Rendered frame'),
+   caption:cap?cap.textContent.trim():(img.alt||''),
+   origHref:link?link.getAttribute('href'):null
+  };
+ }
+ function showAt(index){
+  if(!activeList.length)return;
+  activeIndex=(index+activeList.length)%activeList.length;
+  const img=activeList[activeIndex];
+  const info=describeImage(img);
+  scale=1;panX=0;panY=0;applyTransform();
+  lbImg.src=img.currentSrc||img.src;
+  lbImg.alt=img.alt||info.heading;
+  lbCounter.textContent=`${activeIndex+1} / ${activeList.length}`;
+  lbTitle.textContent=(info.badge?`[${info.badge}] `:'')+info.heading;
+  lbCaption.textContent=info.caption;
+  if(info.origHref){
+   lbOrig.href=info.origHref;
+   lbOrig.hidden=false;
+  }else{
+   lbOrig.removeAttribute('href');
+   lbOrig.hidden=true;
+  }
+ }
+ function openLightbox(img){
+  lastTrigger=img;
+  activeList=getNavigableImages(img);
+  activeIndex=Math.max(0,activeList.indexOf(img));
+  lb.hidden=false;
+  document.body.style.overflow='hidden';
+  showAt(activeIndex);
+ }
+ function closeLightbox(){
+  if(lb.hidden)return;
+  if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});
+  lb.hidden=true;
+  document.body.style.overflow='';
+  if(lastTrigger&&typeof lastTrigger.focus==='function')lastTrigger.focus();
+ }
+ document.addEventListener('click',e=>{
+  const img=e.target.closest('figure img');
+  if(img&&!lb.contains(img)){
+   e.preventDefault();
+   openLightbox(img);
+  }
+ });
+ document.addEventListener('keydown',e=>{
+  if(lb.hidden){
+   if((e.key==='Enter'||e.key===' ')&&document.activeElement&&document.activeElement.matches('figure img')){
+    e.preventDefault();
+    openLightbox(document.activeElement);
+   }
+   return;
+  }
+  if(e.key==='Escape'){e.preventDefault();closeLightbox();}
+  else if(e.key==='ArrowRight'){e.preventDefault();showAt(activeIndex+1);}
+  else if(e.key==='ArrowLeft'){e.preventDefault();showAt(activeIndex-1);}
+  else if(e.key==='+'||e.key==='='){e.preventDefault();setZoom(scale+0.5);}
+  else if(e.key==='-'){e.preventDefault();setZoom(scale-0.5);}
+  else if(e.key==='0'){e.preventDefault();setZoom(1);}
+  else if(e.key==='f'||e.key==='F'){
+   e.preventDefault();
+   if(!document.fullscreenElement)lb.requestFullscreen?.().catch(()=>{});
+   else document.exitFullscreen?.().catch(()=>{});
+  }
+ });
+ document.getElementById('lb-close').addEventListener('click',closeLightbox);
+ document.getElementById('lb-prev').addEventListener('click',e=>{e.stopPropagation();showAt(activeIndex-1);});
+ document.getElementById('lb-next').addEventListener('click',e=>{e.stopPropagation();showAt(activeIndex+1);});
+ document.getElementById('lb-zoom-in').addEventListener('click',()=>setZoom(scale+0.5));
+ document.getElementById('lb-zoom-out').addEventListener('click',()=>setZoom(scale-0.5));
+ btnReset.addEventListener('click',()=>setZoom(scale>1.01?1:2));
+ document.getElementById('lb-fullscreen').addEventListener('click',()=>{
+  if(!document.fullscreenElement)lb.requestFullscreen?.().catch(()=>{});
+  else document.exitFullscreen?.().catch(()=>{});
+ });
+ stage.addEventListener('click',e=>{
+  if(e.target===stage)closeLightbox();
+ });
+ stage.addEventListener('dblclick',e=>{
+  if(e.target.closest('.lb-nav'))return;
+  setZoom(scale>1.01?1:2.5);
+ });
+ stage.addEventListener('wheel',e=>{
+  e.preventDefault();
+  setZoom(scale+(e.deltaY<0?0.35:-0.35));
+ },{passive:false});
+ lbImg.addEventListener('pointerdown',e=>{
+  if(scale<=1.01)return;
+  dragging=true;startX=e.clientX-panX;startY=e.clientY-panY;
+  stage.classList.add('dragging');
+  lbImg.setPointerCapture(e.pointerId);
+ });
+ lbImg.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  panX=e.clientX-startX;panY=e.clientY-startY;
+  applyTransform();
+ });
+ lbImg.addEventListener('pointerup',()=>{dragging=false;stage.classList.remove('dragging');});
+ lbImg.addEventListener('pointercancel',()=>{dragging=false;stage.classList.remove('dragging');});
+})();
 </script></body></html>
