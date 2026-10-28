@@ -136,7 +136,7 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
 @media(max-width:850px){.evo-strip,.evo-grid-3,.evo-grid-4,.zoom-macro-grid{grid-template-columns:1fr}
  .lb-stage{padding:10px 12px}.lb-nav{top:auto;bottom:76px;transform:none;height:42px}}
 </style></head><body><div class="wrap">
-    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#evolution">02 / Evolution history</a><a href="#vehicle-zooms">02b / Vehicle feature zooms</a><a href="#grounding">03 / Data & corrections</a><a href="#system">04 / Implementation</a><a href="#stills">05 / Fixed-view evidence</a><a href="#motion">06 / Motion stability</a><a href="#performance">07 / Cost</a><a href="#limits">08 / Limits & rejected ideas</a><a href="#reproduce">09 / Reproduce</a><a href="#sources">10 / Sources & manifests</a></nav>
+    <nav class="toc" aria-label="Report contents"><strong>Field report</strong><a href="videos.html">Video library / 26 originals</a><a href="#outcome">01 / Outcome</a><a href="#evolution">02 / Evolution history</a><a href="#vehicle-zooms">02b / Vehicle feature zooms</a><a href="#physics-engine">02c / Physics engine A/B</a><a href="#grounding">03 / Data & corrections</a><a href="#system">04 / Implementation</a><a href="#stills">05 / Fixed-view evidence</a><a href="#motion">06 / Motion stability</a><a href="#performance">07 / Cost</a><a href="#limits">08 / Limits & rejected ideas</a><a href="#reproduce">09 / Reproduce</a><a href="#sources">10 / Sources & manifests</a></nav>
     <main><p><a href="videos.html">Watch or download all 26 original videos</a></p><header class="hero"><span class="eyebrow">Landscape reconstruction / four rally stages / 27 October 2026</span>
     <span class="status">Verified candidate / production not yet promoted</span>
     <h1>From a repeated corridor<br>to a surveyed landscape.</h1>
@@ -170,15 +170,16 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
     <section id="evolution"><span class="eyebrow">02 / Chronological engineering history</span>
     <h2>From a browser WebGL ribbon to a surveyed landscape.</h2>
     <p>How did we get from a schematic Three.js WebGL telemetry ribbon with blocky procedural cars to the verified renderer
-    shown in this report? Across 73 commits and nine major engineering iterations (Chapters 00&ndash;08), every leap in visual
+    shown in this report? Across 75 commits and ten major engineering iterations (Chapters 00&ndash;09), every leap in visual
     fidelity came from diagnosing a concrete physical or mathematical root cause — including several dead-ends that had to be
     openly abandoned. <strong>Click any image below to inspect it in the full-screen lightbox</strong> (use <code>&larr;</code>
     and <code>&rarr;</code> to step chronologically across the entire evolution, or jump straight to the
-    <a href="#vehicle-zooms">Vehicle &amp; Mechanical Feature Zooms</a>).</p>
+    <a href="#vehicle-zooms">Vehicle &amp; Mechanical Feature Zooms</a> and the
+    <a href="#physics-engine">80 Hz Vehicle Physics A/B Video Showcase</a>).</p>
     <h3>Visual progression across the project lifecycle</h3>
     <div class="evo-strip"><figure><span class="label before">Stage 0 / WebGL</span><img loading="lazy" src="assets/7804125df6e6966c3e18a7a8.jpg" alt="Early browser Three.js WebGL prototype with blocky extruded cars and glowing ribbon road"><figcaption>0. Browser WebGL prototype (98e9116): extruded procedural cars, glowing pink/mint road ribbon, blurred vertex-colored heightmap.</figcaption></figure><figure><span class="label before">Stage I / First Cloud RT</span><img loading="lazy" src="assets/44d390299d1913bdee46e187.jpg" alt="First V710 ray-traced frame with procedural green cone trees"><figcaption>1. First V710 ray-traced frame (609a8f1): remote cloud GPU bring-up, procedural cone trees, first wet-rut ray query.</figcaption></figure><figure><span class="label milestone">Stage II / 260k Grass</span><img loading="lazy" src="assets/0f6c0b712f8fc00ebb9c3a5c.jpg" alt="260,000-strand Cubic-Bezier hair-ribbon grass carpet"><figcaption>2. Hair-system grass revolution (55f525d): 260,000 Cubic-Bezier strands (1.82M verts) with Kajiya-Kay & Marschner backlighting.</figcaption></figure><figure><span class="label deadend">Stage III / Brown Sticks</span><img loading="lazy" src="assets/45f6bdb362801a48fb54789c.jpg" alt="Raw Poly Haven 3D tree import showing bare brown sticks"><figcaption>3. The 'bare brown sticks' crisis: raw 3D tree import lost 97.5% canopy area and mip-bled alpha cards to black.</figcaption></figure><figure><span class="label milestone">Stage IV / 4.1M Forest + 682k Car</span><img loading="lazy" src="assets/503712ce5ee57c91a1d0a215.jpg" alt="4.10M-triangle botanical bundle and 682k-triangle PN-subdivided GR Yaris Rally1"><figcaption>4. 4.10M-tri 8-species botanical bundle (2ff3a0d) + 682k-tri Curved PN-Triangle GR Yaris Rally1 (5b03395) on RTX PRO 6000.</figcaption></figure><figure><span class="label after">Stage V / Surveyed World</span><img loading="lazy" src="assets/8d4f0e8b71961e8bbc9b4254.jpg" alt="Final survey-grounded Elva landscape with metsaserv edge and C2 camera"><figcaption>5. Survey-grounded landscape (edb4b04): Maa-amet/SYKE geodata, 3-tier metsaserv edge, C2 camera, and clip-space stability fix.</figcaption></figure></div>
-    <h3>Summary of the engineering chapters (Ch. 00 &rarr; Ch. 08)</h3>
-    <div class="table-wrap"><table><thead><tr><th>Chapter / Era</th><th>Commits</th><th>Hardware &amp; Core Subsystem</th><th>Diagnostic Bottleneck / Dead-End</th><th>Engineered Solution</th></tr></thead><tbody><tr><td>00 / Browser WebGL Prototype</td><td>98e9116</td><td>Client-side Three.js / WebGL (src/main.js, src/carMesh.js)</td><td>Browser WebGL lacked hardware ray tracing, multi-million-triangle botanical budgets, and high-res LiDAR shading; cars were blocky procedural extrusions on a blurry vertex-colored heightmap.</td><td>Built the initial 5-source telemetry/LiDAR fusion & interactive telemetry HUD in WebGL, then pivoted to dedicated cloud GPU rendering when vmCopilotV710 became available.</td></tr><tr><td>01 / Origin & Cloud RT</td><td>98e9116 -> 609a8f1</td><td>AMD Radeon Pro V710 (54 RDNA 3 Ray Accelerators)</td><td>3D terrain scans and WRC telemetry are never distributed together; local Hyper-V VM had no hardware GPU.</td><td>Fused 5 open datasets (10 Hz WRC telemetry, 30 Hz UT-ADL RTK-GNSS with EPSG:3301 offset discovery, 1 m LiDAR DTM, Riegl .laz clouds, WMS imagery) and injected gc_11_0_3 firmware into initramfs to bring up Vulkan ray queries.</td></tr><tr><td>02 / 260k-Strand Hair Grass</td><td>55f525d, c02c88e</td><td>OpenGL 4.6 / ModernGL + 6-layer moss shell</td><td>Sparse billboard tufts looked artificial; ModernGL's (LINEAR, NEAREST) texture filter snapped grass along the road every 5.5 m.</td><td>Built a 260,000-strand (1.82M-vertex) Cubic-Bezier hair-ribbon groom in a rolling 92 m window with Kajiya-Kay + Marschner shading, 54,000 3D gravel pebbles, and explicit 32-bit float texelFetch spline interpolation.</td></tr><tr><td>03 / Rally Estonia Grounding & Card-Tree Pivot</td><td>ab66786, bbb12a9</td><td>Native 1920x1080 streaming + shadow FBO fix</td><td>glDisable(GL_DEPTH_TEST) prevented shadow_fbo depth writes after frame 0; steering angle was multiplied by 0.075 twice; procedural tree cards looked flat.</td><td>Restored shadow-map depth testing and true Ackermann wheel angles, calibrated against 8 Rally Estonia photos, and pivoted away from procedural tree card atlases to 3D scanned botanical meshes.</td></tr><tr><td>04 / 4.10M-Tri Botanical Bundle</td><td>2ff3a0d</td><td>compile_ultra_highpoly_forest.py (8 species x 3 LODs)</td><td>Raw Poly Haven 3D tree GLTFs rendered as dead brown skeletons ('bare brown sticks').</td><td>Solved 4 compounding causes: topological connected-component cluster scaling, morphological solid-color dilation (alpha=255 on 3D needles), Estonian summer chlorophyll re-grading (G/R = 1.30), and lower canopy skirts.</td></tr><tr><td>05 / Golden Hour, 682k Yaris & Blackwell</td><td>a2aacbf -> 3beb128</td><td>V710 -> A100 -> NVIDIA RTX PRO 6000 Blackwell</td><td>Fixed world-space sun pointed from behind the camera on north-west stages; 231k car mesh had faceted arches; V710 hit Hyper-V SR-IOV VF timeout (-110).</td><td>Switched to corridor-relative cross-lighting (54 deg azimuth, 13.6 deg elevation) with 3D ray-locked shafts, subdivided the GR Yaris Rally1 to 682,182 curved PN-triangles with native 8K/4K atlases, and migrated to RTX PRO 6000.</td></tr><tr><td>06 / 15-Still Forensic Audit (RCA-1..8)</td><td>c665256 -> a0b2a0a</td><td>6 parallel engineering threads</td><td>120 px carEllip UV smear; 50% f_tris[::2] rival car decimation; barns buried to their eaves in 1.8x terrain; crystalline pebbles; low banded clouds.</td><td>Implemented 12-pass 3D wheel shutter blur, Kevlar wheel liners, UE5 Landmass-style graded building pads, spring-damper camera prop avoidance, two-phase dust + Weber V-curtain water spray, and crown-first 3D Perlin-Worley cumulus clouds at 1.45 km LCL.</td></tr><tr><td>07 / Broadcast Director & Shadow-Floor Calibration</td><td>89c9388 -> 63cbb26</td><td>6-shot camera director + exclusive stream sessions</td><td>Full 3D tree shadow maps (FOREST_SHADOW_VERT_SHADER) stacked with Option C's 0.03 ambient shadow floor, crushing forest interiors to ink-black.</td><td>Re-engineered terrain/foliage/road shadow floors with open Baltic blue sky-fill, warm bounce, and self-shadow lift while preserving Option C golden-hour contrast and exclusive stream-session ownership.</td></tr><tr><td>08 / Survey-Grounded Landscapes & Temporal Stability</td><td>edb4b04</td><td>Maa-amet 1 m + ETAK + SYKE 2 m + Metsakeskus + C2 camera</td><td>All four stages still looked like the same uniform green tunnel; 345 m vertex teleportation to vec4(2,2,2,1) caused sky gashes and paused-frame flicker (max diff 105).</td><td>Built stage-specific national geodata fields, 3-tier Estonian metsaserv edges, frustum-first LOD selection, anticipatory C2 crown-clearance cameras, and proper GPU frustum clipping (paused max diff 105 -> 1).</td></tr></tbody></table></div>
+    <h3>Summary of the engineering chapters (Ch. 00 &rarr; Ch. 09)</h3>
+    <div class="table-wrap"><table><thead><tr><th>Chapter / Era</th><th>Commits</th><th>Hardware &amp; Core Subsystem</th><th>Diagnostic Bottleneck / Dead-End</th><th>Engineered Solution</th></tr></thead><tbody><tr><td>00 / Browser WebGL Prototype</td><td>98e9116</td><td>Client-side Three.js / WebGL (src/main.js, src/carMesh.js)</td><td>Browser WebGL lacked hardware ray tracing, multi-million-triangle botanical budgets, and high-res LiDAR shading; cars were blocky procedural extrusions on a blurry vertex-colored heightmap.</td><td>Built the initial 5-source telemetry/LiDAR fusion & interactive telemetry HUD in WebGL, then pivoted to dedicated cloud GPU rendering when vmCopilotV710 became available.</td></tr><tr><td>01 / Origin & Cloud RT</td><td>98e9116 -> 609a8f1</td><td>AMD Radeon Pro V710 (54 RDNA 3 Ray Accelerators)</td><td>3D terrain scans and WRC telemetry are never distributed together; local Hyper-V VM had no hardware GPU.</td><td>Fused 5 open datasets (10 Hz WRC telemetry, 30 Hz UT-ADL RTK-GNSS with EPSG:3301 offset discovery, 1 m LiDAR DTM, Riegl .laz clouds, WMS imagery) and injected gc_11_0_3 firmware into initramfs to bring up Vulkan ray queries.</td></tr><tr><td>02 / 260k-Strand Hair Grass</td><td>55f525d, c02c88e</td><td>OpenGL 4.6 / ModernGL + 6-layer moss shell</td><td>Sparse billboard tufts looked artificial; ModernGL's (LINEAR, NEAREST) texture filter snapped grass along the road every 5.5 m.</td><td>Built a 260,000-strand (1.82M-vertex) Cubic-Bezier hair-ribbon groom in a rolling 92 m window with Kajiya-Kay + Marschner shading, 54,000 3D gravel pebbles, and explicit 32-bit float texelFetch spline interpolation.</td></tr><tr><td>03 / Rally Estonia Grounding & Card-Tree Pivot</td><td>ab66786, bbb12a9</td><td>Native 1920x1080 streaming + shadow FBO fix</td><td>glDisable(GL_DEPTH_TEST) prevented shadow_fbo depth writes after frame 0; steering angle was multiplied by 0.075 twice; procedural tree cards looked flat.</td><td>Restored shadow-map depth testing and true Ackermann wheel angles, calibrated against 8 Rally Estonia photos, and pivoted away from procedural tree card atlases to 3D scanned botanical meshes.</td></tr><tr><td>04 / 4.10M-Tri Botanical Bundle</td><td>2ff3a0d</td><td>compile_ultra_highpoly_forest.py (8 species x 3 LODs)</td><td>Raw Poly Haven 3D tree GLTFs rendered as dead brown skeletons ('bare brown sticks').</td><td>Solved 4 compounding causes: topological connected-component cluster scaling, morphological solid-color dilation (alpha=255 on 3D needles), Estonian summer chlorophyll re-grading (G/R = 1.30), and lower canopy skirts.</td></tr><tr><td>05 / Golden Hour, 682k Yaris & Blackwell</td><td>a2aacbf -> 3beb128</td><td>V710 -> A100 -> NVIDIA RTX PRO 6000 Blackwell</td><td>Fixed world-space sun pointed from behind the camera on north-west stages; 231k car mesh had faceted arches; V710 hit Hyper-V SR-IOV VF timeout (-110).</td><td>Switched to corridor-relative cross-lighting (54 deg azimuth, 13.6 deg elevation) with 3D ray-locked shafts, subdivided the GR Yaris Rally1 to 682,182 curved PN-triangles with native 8K/4K atlases, and migrated to RTX PRO 6000.</td></tr><tr><td>06 / 15-Still Forensic Audit (RCA-1..8)</td><td>c665256 -> a0b2a0a</td><td>6 parallel engineering threads</td><td>120 px carEllip UV smear; 50% f_tris[::2] rival car decimation; barns buried to their eaves in 1.8x terrain; crystalline pebbles; low banded clouds.</td><td>Implemented 12-pass 3D wheel shutter blur, Kevlar wheel liners, UE5 Landmass-style graded building pads, spring-damper camera prop avoidance, two-phase dust + Weber V-curtain water spray, and crown-first 3D Perlin-Worley cumulus clouds at 1.45 km LCL.</td></tr><tr><td>07 / Broadcast Director & Shadow-Floor Calibration</td><td>89c9388 -> 63cbb26</td><td>6-shot camera director + exclusive stream sessions</td><td>Full 3D tree shadow maps (FOREST_SHADOW_VERT_SHADER) stacked with Option C's 0.03 ambient shadow floor, crushing forest interiors to ink-black.</td><td>Re-engineered terrain/foliage/road shadow floors with open Baltic blue sky-fill, warm bounce, and self-shadow lift while preserving Option C golden-hour contrast and exclusive stream-session ownership.</td></tr><tr><td>08 / Survey-Grounded Landscapes & Temporal Stability</td><td>edb4b04</td><td>Maa-amet 1 m + ETAK + SYKE 2 m + Metsakeskus + C2 camera</td><td>All four stages still looked like the same uniform green tunnel; 345 m vertex teleportation to vec4(2,2,2,1) caused sky gashes and paused-frame flicker (max diff 105).</td><td>Built stage-specific national geodata fields, 3-tier Estonian metsaserv edges, frustum-first LOD selection, anticipatory C2 crown-clearance cameras, and proper GPU frustum clipping (paused max diff 105 -> 1).</td></tr><tr><td>09 / Telemetry-Coupled 80 Hz Vehicle Physics & Ballistic Suspension</td><td>dd02879</td><td>Cloud EGL + Browser WebGL (v710_renderer.py, a100_renderer.py, src/main.js, src/carMesh.js)</td><td>Cars felt weightless ('on a turntable'): 2 Hz synthetic straight-line yaw sine wiggle (rut_yaw_kicks), uncoupled lateral crabbing, ignored accx/accy G-sensors, rigid wheel-to-body tilt, and clamped linear spring heave over jumps.</td><td>Fused auto-calibrated 10 Hz onboard G-sensors (accx, accy) into an 80 Hz sub-stepped nonlinear single-track bicycle ODE with non-holonomic velocity heading, +0.78 m front-axle drift pivot, parabolic crest flight (-7.2 cm droop, 2.35x Reiger damping), and decoupled 4-corner unsprung wheel knuckles.</td></tr></tbody></table></div>
     
     <article class="evo-chapter" id="evo-ch0">
       <header>
@@ -457,6 +458,27 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
       <p>The rest of this report presents the complete geospatial data pipeline, engineering implementation, 54 matched still pairs,
       and 26 five-second 1080p/30 FPS motion clips proving Chapter 08 in detail.</p>
     </article>
+    <article class="evo-chapter" id="evo-ch9">
+      <header>
+        <div class="evo-meta"><span>Chapter 09</span><span>Commit dd02879</span><span>80 Hz Nonlinear Single-Track ODE + Onboard G-Sensors + Ballistic Reiger Suspension</span></div>
+        <h3>Giving the Car Real Mass: Telemetry-Coupled 80 Hz Vehicle Dynamics, Front-Axle Drift Pivoting &amp; Unsprung Wheel Articulation</h3>
+      </header>
+      <blockquote class="evo-quote">&ldquo;the cars move in a way that doesn&rsquo;t quite seem believable, they don&rsquo;t seem to have the &lsquo;weight&rsquo; behind it. Especially the heading, it seems the cars just turn on a dime, as if the steering wheel directly changes the heading (as if it&rsquo;s on a platform).&rdquo;</blockquote>
+      <p>Inspecting the car&rsquo;s motion in playback exposed five mathematical causes behind that &ldquo;weightless / turntable&rdquo; feel:
+      (1) lateral offset (<code>lat_offset</code>) and yaw slip (<code>slip_angle</code>) were solved as two uncoupled filters while heading
+      referenced the static road centerline tangent rather than the car&rsquo;s displaced velocity vector (&ldquo;crabbing on a dolly&rdquo;);
+      (2) corner-entry yaw added up to <code>23&deg;</code> of algebraic curvature slip around the center <code>(0,0,0)</code> while
+      <code>rut_yaw_kicks</code> injected a synthetic <code>2.0 Hz</code> straight-line yaw sine wiggle (<code>&plusmn;6.5&deg;</code> to
+      <code>&plusmn;22.9&deg;</code> on straightaways); (3) real 10 Hz onboard accelerometer channels (<code>accx</code>, <code>accy</code>)
+      in the WRC telemetry JSON were ignored (and had inverted axis polarity on <code>ruuhimaki</code>); (4) all four wheels were multiplied
+      by the sprung <code>chassis_mat</code> (<code>w_world = chassis_mat @ w_local</code>), tilting the tires rigidly off the road when the
+      body rolled or dived; and (5) crest jumps used a clamped symmetric linear spring (<code>&zeta; = 0.28</code>) with no parabolic
+      free-fall or rebound damping control.</p>
+      <p>In commit <code>dd02879</code> (<code>scripts/v710_renderer.py</code>, <code>scripts/a100_renderer.py</code>, <code>src/main.js</code>,
+      <code>src/carMesh.js</code>), we replaced the uncoupled filters with a <strong>coupled 80 Hz sub-stepped nonlinear 6-DOF rally physics
+      engine</strong>. See <a href="#physics-engine">Section 02c below</a> for the full mathematical architecture and 8 synchronized
+      <code>1920&times;1080</code> / <code>30 FPS</code> A/B video comparisons.</p>
+    </article>
     </section>
     
     <section id="vehicle-zooms"><span class="eyebrow">02b / Vehicle &amp; mechanical feature deep-dives</span>
@@ -576,6 +598,248 @@ figure:hover .zoom-badge,figure:focus-within .zoom-badge{opacity:1}
       <div class="pair">
         <figure><span class="label before">Full Frame Before / Side Profile Braking (t=22.80s)</span><img loading="lazy" src="assets/b78bf3dc48f72943dda9872a.jpg" alt="Full 1920x1080 side profile under 48% braking before fixing carEllip smear and static wheels"><figcaption>car_closeup_side_braking_before.jpg: Full 1080p side profile at t=22.80s (58 km/h, 48% brake) before RCA-1/3/4 — smeared decals and static wheels.</figcaption></figure>
         <figure><span class="label after">Full Frame After / Side Profile Braking (t=22.80s)</span><img loading="lazy" src="assets/dd989358c94a4dec2fc21686.jpg" alt="Full 1920x1080 side profile under 48% braking showing forward suspension dive, steered front wheel, and 12-pass 3D wheel blur"><figcaption>car_closeup_side_braking_after.jpg: Full 1080p side profile at t=22.80s after RCA-1/3/4 — crisp #69 livery, forward braking pitch, enclosed arches, and 12-pass 3D rotational blur.</figcaption></figure>
+      </div>
+    </article>
+    </section>
+    
+    <section id="physics-engine"><span class="eyebrow">02c / Coupled 80 Hz vehicle physics &amp; suspension overhaul (commit dd02879)</span>
+    <h2>From a weightless turntable to a 1,230 kg gravel rally car.</h2>
+    <p>Even with survey-grounded forests and a 682,182-triangle car mesh, motion playback is only convincing if the car carries
+    authentic rotational inertia, weight transfer, and unsprung wheel compliance. When we audited why the car previously felt
+    <em>&ldquo;weightless / on a platform / turning on a dime,&rdquo;</em> we traced the artifact to five mathematical shortcuts in the
+    40 Hz spline pre-integrator and wheel transform hierarchy — and replaced them in commit <code>dd02879</code> across both the
+    cloud EGL renderers (<code>scripts/v710_renderer.py</code>, <code>scripts/a100_renderer.py</code>) and the browser WebGL client
+    (<code>src/main.js</code>, <code>src/carMesh.js</code>).</p>
+    <div class="zoom-pill-bar">
+      <a class="zoom-pill" href="#phys-ab01">AB01 / Straightaway Stability &darr;</a>
+      <a class="zoom-pill" href="#phys-ab02">AB02 / +0.78m Front-Axle Drift Pivot &darr;</a>
+      <a class="zoom-pill" href="#phys-ab03">AB03 / Ruuhim&auml;ki Crest Jump &darr;</a>
+      <a class="zoom-pill" href="#phys-ab04">AB04 / Elva 177 km/h Crest Launch &darr;</a>
+      <a class="zoom-pill" href="#phys-ab05">AB05 / Unsprung Wheel Decoupling &darr;</a>
+      <a class="zoom-pill" href="#phys-ab06">AB06 / 3-Car Pack Braking &darr;</a>
+      <a class="zoom-pill" href="#phys-ab07">AB07 / 181 km/h S-Bend Inertia &darr;</a>
+      <a class="zoom-pill" href="#phys-ab08">AB08 / 187 km/h High-G Sweeper &darr;</a>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Physics Subsystem</th><th>Before (40 Hz Uncoupled Linear Filters)</th><th>After (80 Hz Coupled 6-DOF Dynamics, Commit dd02879)</th><th>Implementation / Evidence</th></tr></thead><tbody><tr><td>1 / Onboard G-Sensor Fusion & Auto-Polarity</td><td>Ignored 10 Hz onboard accelerometer channels (accx, accy); relied solely on Gaussian-smoothed 10 Hz GPS spline curvature kappa * v_x^2; Ruuhimaki logger had inverted accx polarity.</td><td>Loads 10 Hz accx/accy, auto-calibrates axis polarity via dot-product against GPS curvature & pedal effort (fixing Ruuhimaki), and fuses lat_accel = 0.64*(kappa*v_x^2) + 0.36*(accx*g) and lon_accel = 0.45*dv/dt + 0.30*(accy*g) + 0.25*pedals.</td><td>StageAssets.__init__, _build_vehicle_physics_splines</td></tr><tr><td>2 / Straight-Line Momentum vs. 2 Hz Sine Wiggle</td><td>Injected synthetic spatial sine waves (rut_weave + rut_yaw_kicks) that oscillated heading up to +/-22.9 deg at 2.0 Hz on 160 km/h straightaways with zero lateral force.</td><td>Removed synthetic straight-line yaw/lateral sine waves; heavy-mass racing-line ODE (omega_n = 2.25 rad/s, zeta = 0.66) tracks straightaways with 1,230 kg momentum.</td><td>AB01 (Otepaa t=49-54s), AB07 (Neeruti t=142.5-147.5s)</td></tr><tr><td>3 / Non-Holonomic Velocity Heading & +0.78 m Front-Axle Pivot</td><td>Uncoupled lateral filter translated the car sideways while pointing parallel to the centerline ('dolly crabbing') and rotated slip around geometric center (0,0,0).</td><td>Couples lateral velocity into travel heading (gamma_vel = gamma_road - atan2(lat_vel, v_x)) and shifts drift pivot +0.78 m forward (lat_offset = lat_line + 0.78*sin(beta)) so front tires stay pinned to the inside apex while the rear tail swings wide.</td><td>AB02 (Ruuhimaki t=233-238s), AB08 (Otepaa t=327.5-332.5s)</td></tr><tr><td>4 / Coupled 80 Hz Single-Track Bicycle Yaw Inertia</td><td>Memoryless algebraic drift target (-0.36 * tanh(lat_accel / 5.4)) double-counted turn rate at corner entry ('turning on a dime') and snapped to 0 deg mid-S-bend.</td><td>80 Hz sub-stepped single-track yaw-sideslip ODE with longitudinal weight transfer (lon_wt_ratio), trail-braking turn-in moment (dkappa/dt * brk), and mid-air angular momentum conservation (wn_beta scaled by w_gnd).</td><td>AB06 (Elva pack t=22.5-27.5s), AB07 (Neeruti t=142.5-147.5s)</td></tr><tr><td>5 / True Ballistic Parabolic Crest Flight & 2.35x Reiger Damping</td><td>Clamped symmetric linear spring ([-6.2, +9.5] cm, zeta = 0.28) never entered free-fall (Fz -> 0), clamped droop to -5.6 cm, and pogo-bounced after jumps.</td><td>Detects airborne unloading (w_gnd -> 0 over crests), integrates parabolic free-fall with full -7.2 cm Reiger wheel droop, progressive hydraulic bump stops (+4.4 cm), and 2.35x asymmetric rebound-to-bump damping (c_rebound = 23.5 vs c_bump = 10.2).</td><td>AB03 (Ruuhimaki jump t=255-260s), AB04 (Elva 177 km/h crest t=106.5-111.5s)</td></tr><tr><td>6 / Decoupled 4-Corner Unsprung Wheel Knuckles</td><td>Multiplied all 4 wheels by sprung chassis_mat (w_world = chassis_mat @ w_local) with only 55% jounce transfer — tilting wheels rigidly off the ground when the body rolled or dived.</td><td>Counter-rotates wheel knuckles against sprung body roll (-0.82 * susp_roll) and pitch (-0.85 * lon_pitch_rad) with MacPherson camber gain (-2.2 deg + 0.52*j_w) and 100% kinematic 4-corner jounce so tires stay locked flat in the 3D gravel ruts.</td><td>AB05 (Neeruti 93% brake t=268.5-273.5s), V710CloudRenderer._draw_car</td></tr></tbody></table></div>
+    <div class="zoom-macro-grid" style="margin:22px 0">
+      <figure><span class="label milestone">Architecture / Front-Axle Pivot, Unsprung Knuckles & Reiger Damper</span><img loading="lazy" src="assets/6d90f4e7cab3d3f7964f9ea9.jpg" alt="3-panel kinematic diagram comparing front-axle drift pivot, decoupled unsprung wheel knuckles, and 2.35x asymmetric Reiger damping"><figcaption>physics_ab_kinematics_diagram.jpg: (1) +0.78 m front-axle drift pivot vs (0,0,0) turntable; (2) decoupled unsprung wheel knuckles vs rigid block tilt; (3) asymmetric Reiger damper (c_rebound = 23.5 vs c_bump = 10.2).</figcaption></figure>
+      <figure><span class="label after">Telemetry & ODE Traces / 40 Hz Uncoupled vs 80 Hz Coupled 6-DOF</span><img loading="lazy" src="assets/9443176630d2ce36fc13d4fc.jpg" alt="4-panel telemetry and ODE trace comparison across Otepaa, Ruuhimaki, and Neeruti"><figcaption>physics_ab_telemetry_traces.jpg: Direct spline comparisons showing (A) elimination of the 2 Hz straightaway yaw sine wiggle, (B) -7.2 cm airborne wheel droop over jumps, (C) +0.78 m front-axle pivot shift, and (D) 100% decoupled unsprung diagonal jounce.</figcaption></figure>
+    </div>
+    
+    <article class="zoom-showcase" id="phys-ab01">
+      <header>
+        <div class="evo-meta"><span>AB01 / Straightaway Stability</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS4 Otep&auml;&auml; (t = 49.0&ndash;54.0 s, 138 km/h) &middot; Eliminating the 2 Hz Straight-Line &ldquo;Turntable&rdquo; Sine Wiggle</h3>
+      </header>
+      <p>On fast straightaways and gentle kinks, the previous solver injected spatial sine waves (<code>rut_yaw_kicks</code> and <code>rut_weave</code>) that swung the car&rsquo;s sideslip between <code>-23.0&deg;</code> and <code>+22.9&deg;</code> (`max |&Delta;&beta;| = 26.6&deg;`) as if rotating on a motorized turntable. The new 80 Hz coupled engine removes synthetic straight-line sine forcing and drives the heavy-mass racing line (<code>&omega;<sub>n</sub> = 2.25 rad/s</code>, <code>&zeta; = 0.66</code>) strictly from calibrated onboard lateral G (<code>accx</code>) and road curvature.</p>
+      
+      <div class="pair" id="phys-pair-01">
+        <figure><span class="label before">Before Video / AB01 / Straightaway Stability</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/21f475fb4dd46b31a7fdbea5.jpg"
+            src="previews/06f2f8d26d8e78af4cecbb06.mp4"></video>
+          <figcaption>Before (40 Hz Uncoupled + Sine Wiggle): Fake +/-22.9 deg turntable yaw oscillation on straightaway.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB01 / Straightaway Stability</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/15a3b92cea650cdc27dc852c.jpg"
+            src="previews/c2b7ab69d6e479cf0548f8c3.mp4"></video>
+          <figcaption>After (80 Hz Coupled 6-DOF, dd02879): Composed 1,230 kg straight-line tracking driven by real onboard accx.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-01')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB01 / Straightaway Stability</span><img loading="lazy" src="assets/d52f39d2ba2941e6f463d664.jpg" alt="1080p keyframe before physics overhaul for ab01_otepaa_straight_stability"><figcaption>Before (40 Hz Uncoupled + Sine Wiggle): Fake +/-22.9 deg turntable yaw oscillation on straightaway.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB01 / Straightaway Stability</span><img loading="lazy" src="assets/925bc2def58cc6574b84318b.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab01_otepaa_straight_stability"><figcaption>After (80 Hz Coupled 6-DOF, dd02879): Composed 1,230 kg straight-line tracking driven by real onboard accx.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab02">
+      <header>
+        <div class="evo-meta"><span>AB02 / Front-Axle Drift Pivot</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS1 Ruuhim&auml;ki (t = 233.0&ndash;238.0 s, 176 km/h, 1.01G Lateral) &middot; Auto-Calibrated G-Sensor Fusion, Velocity Heading &amp; +0.78 m Front-Axle Pivot</h3>
+      </header>
+      <p>On <code>ruuhimaki</code>, the raw onboard <code>accx</code> channel had inverted logger polarity and was previously ignored. In the <em>Before</em> clip, the car translates laterally across the road while pointing parallel to the centerline (&ldquo;crabbing on a dolly&rdquo;) and pivots around <code>(0,0,0)</code> while bouncing on fake vertical bump waves (<code>+8.1 cm</code>). In the <em>After</em> clip, auto-calibrated <code>accx</code> (<code>1.01G</code>) fuses with curvature, travel heading aligns with the non-holonomic CoM velocity vector (&gamma;<sub>vel</sub> = &gamma;<sub>road</sub> &minus; atan2(&dot;e<sub>y</sub>, v<sub>x</sub>)), and the <code>+22.5&deg;</code> power slide pivots around the biting front axle (<code>+0.78 m</code> ahead of CoM) so the front wheels stay pinned on the inside apex groove while the rear tail swings wide.</p>
+      
+      <div class="pair" id="phys-pair-02">
+        <figure><span class="label before">Before Video / AB02 / Front-Axle Drift Pivot</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/5fe9fa07f041e79ed6a58cae.jpg"
+            src="previews/0fbf8e09c99871f623d6d9a6.mp4"></video>
+          <figcaption>Before (40 Hz Uncoupled): Center (0,0,0) turntable rotation, sideways dolly crabbing, and +8.1 cm fake bump bounce.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB02 / Front-Axle Drift Pivot</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/b0279632bcd5cb651908e2a8.jpg"
+            src="previews/16fc0f0915c63f41f10425f9.mp4"></video>
+          <figcaption>After (80 Hz Coupled, dd02879): Auto-calibrated 1.01G accx fusion, velocity heading, and +0.78 m front-axle apex pivot.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-02')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB02 / Front-Axle Drift Pivot</span><img loading="lazy" src="assets/434fad65684217c944355f49.jpg" alt="1080p keyframe before physics overhaul for ab02_ruuhimaki_drift_pivot"><figcaption>Before (40 Hz Uncoupled): Center (0,0,0) turntable rotation, sideways dolly crabbing, and +8.1 cm fake bump bounce.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB02 / Front-Axle Drift Pivot</span><img loading="lazy" src="assets/c22da556996edd78d78e648b.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab02_ruuhimaki_drift_pivot"><figcaption>After (80 Hz Coupled, dd02879): Auto-calibrated 1.01G accx fusion, velocity heading, and +0.78 m front-axle apex pivot.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab03">
+      <header>
+        <div class="evo-meta"><span>AB03 / Ballistic Crest Jump</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS1 Ruuhim&auml;ki (t = 255.0&ndash;260.0 s, 162 km/h) &middot; True Ballistic Parabolic Crest Flight (F<sub>z</sub> &rarr; 0), &minus;7.2 cm Full Wheel Droop &amp; 2.35&times; Reiger Landing</h3>
+      </header>
+      <p>Over the signature Finnish Ruuhim&auml;ki jump crest at <code>162 km/h</code>, the previous model used a clamped symmetric linear spring (<code>&zeta; = 0.28</code>, droop limited to <code>&minus;5.6 cm</code>) that never entered free-fall and pogo-bounced after landing. The new 80 Hz ballistic solver detects spring unloading (<code>w<sub>gnd</sub> &rarr; 0</code>), launches the chassis along a true parabolic arc (<code>+9.1 cm</code> heave) with all four wheels extending to <code>&minus;7.2 cm</code> full Reiger droop below the sills, conserves angular momentum in mid-air, and absorbs the multi-G landing impact into progressive hydraulic bump stops (<code>+4.4 cm</code>) with <code>2.35&times;</code> rebound-to-bump damping (<code>c<sub>rebound</sub> = 23.5</code> vs. <code>c<sub>bump</sub> = 10.2</code>).</p>
+      
+      <div class="pair" id="phys-pair-03">
+        <figure><span class="label before">Before Video / AB03 / Ballistic Crest Jump</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/113bd819b5036dd001208089.jpg"
+            src="previews/a1908a92db2c5e592af4508a.mp4"></video>
+          <figcaption>Before (40 Hz Linear Spring): Clamped -5.6 cm droop, rigid wheel tilt, and post-jump pogo oscillation.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB03 / Ballistic Crest Jump</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/b2c14a859424e0dd09931c67.jpg"
+            src="previews/cd995880e78f8c48bdb1ca72.mp4"></video>
+          <figcaption>After (80 Hz Ballistic Reiger, dd02879): Parabolic free-fall (+9.1 cm heave), -7.2 cm full wheel droop, and 2.35x damped landing.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-03')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB03 / Ballistic Crest Jump</span><img loading="lazy" src="assets/62ad83c6efa3731a0c05c15a.jpg" alt="1080p keyframe before physics overhaul for ab03_ruuhimaki_crest_jump"><figcaption>Before (40 Hz Linear Spring): Clamped -5.6 cm droop, rigid wheel tilt, and post-jump pogo oscillation.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB03 / Ballistic Crest Jump</span><img loading="lazy" src="assets/8cb67fddff7c24a9e9fe6f8c.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab03_ruuhimaki_crest_jump"><figcaption>After (80 Hz Ballistic Reiger, dd02879): Parabolic free-fall (+9.1 cm heave), -7.2 cm full wheel droop, and 2.35x damped landing.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab04">
+      <header>
+        <div class="evo-meta"><span>AB04 / 177 km/h Crest Unloading</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS2 Elva (t = 106.5&ndash;111.5 s, 177 km/h) &middot; High-Speed Crest Unloading &amp; Progressive Hydraulic Bump-Stop Compression</h3>
+      </header>
+      <p>Framed from a low 3/4 wheel-arch tracking camera at <code>177 km/h</code> on SS2 Elva, this pair isolates high-speed vertical unloading followed by compression into a fast left-hander. Notice how the <em>After</em> suspension extends all four tires to full <code>&minus;7.2 cm</code> rebound droop over the crest and then compresses cleanly into the outside-right wheel arch without lifting the inside tires off the gravel bed.</p>
+      
+      <div class="pair" id="phys-pair-04">
+        <figure><span class="label before">Before Video / AB04 / 177 km/h Crest Unloading</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/4f7e6b61fd8e6b6d95f104a9.jpg"
+            src="previews/6af6d677ac6184153d4eab43.mp4"></video>
+          <figcaption>Before (40 Hz Uncoupled): Minimal crest extension and rigid chassis/wheel block roll.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB04 / 177 km/h Crest Unloading</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/76bf895b8ff32eb25e94c6a9.jpg"
+            src="previews/67b8388238c431378968f894.mp4"></video>
+          <figcaption>After (80 Hz Ballistic Reiger, dd02879): Full +9.2 cm crest unloading, -7.2 cm droop, and progressive hydraulic bump-stop compression.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-04')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB04 / 177 km/h Crest Unloading</span><img loading="lazy" src="assets/a58372ce7fe68b6e9465c453.jpg" alt="1080p keyframe before physics overhaul for ab04_elva_crest_launch"><figcaption>Before (40 Hz Uncoupled): Minimal crest extension and rigid chassis/wheel block roll.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB04 / 177 km/h Crest Unloading</span><img loading="lazy" src="assets/d874a4daf809f59afb018730.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab04_elva_crest_launch"><figcaption>After (80 Hz Ballistic Reiger, dd02879): Full +9.2 cm crest unloading, -7.2 cm droop, and progressive hydraulic bump-stop compression.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab05">
+      <header>
+        <div class="evo-meta"><span>AB05 / Unsprung Wheel Decoupling</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS3 Neeruti (t = 268.5&ndash;273.5 s, 93% Brake, &minus;0.81G Decel) &middot; Decoupled 4-Corner Unsprung Wheel Knuckles vs. Rigid Block Tilt</h3>
+      </header>
+      <p>Under <code>93%</code> trail-braking and <code>&minus;0.81G</code> longitudinal deceleration into the Neeruti corner, the car pitches <code>+3.8&deg;</code> nose-down and leans <code>&minus;5.6&deg;</code> in roll. Previously, <code>w_world = chassis_mat @ w_local</code> tilted all four wheels rigidly with the sprung body using only <code>55%</code> jounce transfer — tilting the rear tire sideways off the road. In <code>dd02879</code>, the wheel knuckles counter-rotate against sprung body roll (<code>&minus;0.82 &middot; susp_roll</code>) and pitch (<code>&minus;0.85 &middot; lon_pitch</code>) with 100% kinematic 4-corner jounce (<code>[&minus;7.2, +4.4] cm</code>), keeping every tire planted flat in the 3D gravel ruts while the body visibly dives and rolls above them.</p>
+      
+      <div class="pair" id="phys-pair-05">
+        <figure><span class="label before">Before Video / AB05 / Unsprung Wheel Decoupling</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/9012b721145447ecae091550.jpg"
+            src="previews/f40fafdcde3b26067ce735c6.mp4"></video>
+          <figcaption>Before (Rigid Wheel Multiply): Wheels tilt sideways with the rolled chassis; only 55% jounce transfer.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB05 / Unsprung Wheel Decoupling</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/dca41eb30513f65a6a5e8560.jpg"
+            src="previews/4a7d62a1e27856ef0a08b4c9.mp4"></video>
+          <figcaption>After (Decoupled Unsprung Knuckles, dd02879): Tires stay locked flat in 3D gravel ruts while body dives +3.8 deg and rolls -5.6 deg.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-05')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB05 / Unsprung Wheel Decoupling</span><img loading="lazy" src="assets/4b579d3f5b6877d4f655b396.jpg" alt="1080p keyframe before physics overhaul for ab05_neeruti_braking_unsprung"><figcaption>Before (Rigid Wheel Multiply): Wheels tilt sideways with the rolled chassis; only 55% jounce transfer.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB05 / Unsprung Wheel Decoupling</span><img loading="lazy" src="assets/5bbb44d035246922a3c9ccdf.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab05_neeruti_braking_unsprung"><figcaption>After (Decoupled Unsprung Knuckles, dd02879): Tires stay locked flat in 3D gravel ruts while body dives +3.8 deg and rolls -5.6 deg.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab06">
+      <header>
+        <div class="evo-meta"><span>AB06 / 3-Car Pack Braking & Weight Transfer</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS2 Elva (t = 22.5&ndash;27.5 s, 3-Car Pack Chase) &middot; Longitudinal Weight Transfer, Trail-Braking Turn-In &amp; Pack-Wide 80 Hz Dynamics</h3>
+      </header>
+      <p>Entering the Elva chicane with all three pack cars visible (<code>#69 Rovanper&auml;</code>, <code>#33 Evans</code>, and <code>#00 Optimal</code>), the uncoupled model swung <code>#69</code> through a <code>34.5&deg;</code> sideslip discrepancy with abrupt center-pivot yaw snaps. The coupled 80 Hz solver transfers weight forward under braking (<code>lon_wt_ratio</code>), generates a physical trail-braking turn-in yaw moment (<code>d&kappa;/dt &middot; brk</code>), and coordinates independent racing lines and suspension dive across all three cars.</p>
+      
+      <div class="pair" id="phys-pair-06">
+        <figure><span class="label before">Before Video / AB06 / 3-Car Pack Braking & Weight Transfer</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/3772c794adbdeb9df8a10691.jpg"
+            src="previews/651e3d7aa47a8ff78d08c244.mp4"></video>
+          <figcaption>Before (40 Hz Uncoupled Pack): Abrupt center-pivot yaw swings (34.5 deg discrepancy) and uncoupled lateral sliding.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB06 / 3-Car Pack Braking & Weight Transfer</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/45fa93eb20897c05a40ea634.jpg"
+            src="previews/f8f29b0bf7c7ab3e4b8a5f1a.mp4"></video>
+          <figcaption>After (80 Hz Coupled Pack, dd02879): Trail-braking weight transfer, front-axle apex bite, and synchronized 3-car suspension dive.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-06')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB06 / 3-Car Pack Braking & Weight Transfer</span><img loading="lazy" src="assets/39afba54597e5c9f1f90c74c.jpg" alt="1080p keyframe before physics overhaul for ab06_elva_chicane_pack"><figcaption>Before (40 Hz Uncoupled Pack): Abrupt center-pivot yaw swings (34.5 deg discrepancy) and uncoupled lateral sliding.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB06 / 3-Car Pack Braking & Weight Transfer</span><img loading="lazy" src="assets/35374367d40e20476e6fe4cc.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab06_elva_chicane_pack"><figcaption>After (80 Hz Coupled Pack, dd02879): Trail-braking weight transfer, front-axle apex bite, and synchronized 3-car suspension dive.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab07">
+      <header>
+        <div class="evo-meta"><span>AB07 / 181 km/h S-Bend Inertia</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS3 Neeruti (t = 142.5&ndash;147.5 s, 181 km/h) &middot; S-Bend Rotational Yaw Inertia &amp; Delayed Centrifugal Exit Drift</h3>
+      </header>
+      <p>Through the <code>181 km/h</code> Neeruti S-bend transition, the memoryless algebraic curvature formula in <em>Before</em> collapsed sideslip to <code>&minus;0.9&deg;</code> right at the inflection point, making the car snap flat as if on rails before jerking into the next bend. In <em>After</em>, the coupled single-track bicycle yaw ODE carries rotational inertia (<code>I<sub>zz</sub></code>) across the inflection point (<code>+19.5&deg;</code> sideslip, <code>+0.39 m</code> centrifugal exit drift) with asymmetric roll damping (<code>c<sub>r</sub> = 11.8</code> load / <code>17.5</code> recovery).</p>
+      
+      <div class="pair" id="phys-pair-07">
+        <figure><span class="label before">Before Video / AB07 / 181 km/h S-Bend Inertia</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/8fce235c2a065730e3a1b5db.jpg"
+            src="previews/33ab6e7327159ec6a549cf48.mp4"></video>
+          <figcaption>Before (Memoryless Algebraic Slip): Collapses to -0.9 deg dead-straight mid-transition at 181 km/h.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB07 / 181 km/h S-Bend Inertia</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/cd9091d18856ad711d16ca10.jpg"
+            src="previews/535a284136220dec8488e84f.mp4"></video>
+          <figcaption>After (80 Hz Coupled Yaw Inertia, dd02879): Carries +19.5 deg rotational momentum and centrifugal drift through the S-bend exit.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-07')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB07 / 181 km/h S-Bend Inertia</span><img loading="lazy" src="assets/20e2c4e4c149344a2158372b.jpg" alt="1080p keyframe before physics overhaul for ab07_neeruti_sbend_transition"><figcaption>Before (Memoryless Algebraic Slip): Collapses to -0.9 deg dead-straight mid-transition at 181 km/h.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB07 / 181 km/h S-Bend Inertia</span><img loading="lazy" src="assets/e9d31ff6a1dea14992d988d2.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab07_neeruti_sbend_transition"><figcaption>After (80 Hz Coupled Yaw Inertia, dd02879): Carries +19.5 deg rotational momentum and centrifugal drift through the S-bend exit.</figcaption></figure>
+      </div>
+    </article>
+    <article class="zoom-showcase" id="phys-ab08">
+      <header>
+        <div class="evo-meta"><span>AB08 / 187 km/h High-G Sweeper</span><span>1920&times;1080 &middot; 30 FPS &middot; 150 Frames (5.0 s)</span><span>Matched Corridor Camera</span></div>
+        <h3>SS4 Otep&auml;&auml; (t = 327.5&ndash;332.5 s, 187 km/h, 91% Brake, &minus;1.10G Decel) &middot; Combined High-G Braking Dive (+3.9&deg;), Roll (&minus;5.6&deg;) &amp; Front-Axle Slide</h3>
+      </header>
+      <p>The highest-energy combined braking and cornering sequence across all four stages (<code>187 km/h</code>, <code>91%</code> brake pressure, <code>&minus;1.10G</code> longitudinal deceleration, <code>+0.73G</code> lateral acceleration). Demonstrates simultaneous <code>+3.9&deg;</code> nose-dive, <code>&minus;5.6&deg;</code> outside roll lean, <code>&minus;22.9&deg;</code> front-axle pivot drift, opposite-lock counter-steering, and decoupled 4-corner wheel articulation.</p>
+      
+      <div class="pair" id="phys-pair-08">
+        <figure><span class="label before">Before Video / AB08 / 187 km/h High-G Sweeper</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/0a11218dfccc64d60ef8b120.jpg"
+            src="previews/2387cec1c7f4181a9c9c1a6b.mp4"></video>
+          <figcaption>Before (40 Hz Uncoupled): Rigid wheel-to-body tilt and center-pivot crabbing at 187 km/h.</figcaption>
+        </figure>
+        <figure><span class="label after">After Video (dd02879) / AB08 / 187 km/h High-G Sweeper</span>
+          <video controls muted loop playsinline preload="none"
+            poster="assets/c10e50c53b885f069bfccfcf.jpg"
+            src="previews/872bec1a0d27dde1f633c812.mp4"></video>
+          <figcaption>After (80 Hz Coupled, dd02879): Simultaneous +3.9 deg nose-dive, -5.6 deg roll, -22.9 deg front-axle drift, and planted unsprung tires.</figcaption>
+        </figure>
+      </div>
+      <p style="margin:10px 0 18px"><button type="button" onclick="playPair('phys-pair-08')">&#9654; Play A/B video pair synchronously from frame 0 (1080p / 30 FPS / 5.0 s)</button></p>
+      <div class="pair">
+        <figure><span class="label before">Peak Keyframe Before / AB08 / 187 km/h High-G Sweeper</span><img loading="lazy" src="assets/a51ed223b902009ad47d222a.jpg" alt="1080p keyframe before physics overhaul for ab08_otepaa_highg_sweeper"><figcaption>Before (40 Hz Uncoupled): Rigid wheel-to-body tilt and center-pivot crabbing at 187 km/h.</figcaption></figure>
+        <figure><span class="label after">Peak Keyframe After (dd02879) / AB08 / 187 km/h High-G Sweeper</span><img loading="lazy" src="assets/48a947e1c1cf12cc56a4a8e5.jpg" alt="1080p keyframe after 80 Hz coupled physics overhaul for ab08_otepaa_highg_sweeper"><figcaption>After (80 Hz Coupled, dd02879): Simultaneous +3.9 deg nose-dive, -5.6 deg roll, -22.9 deg front-axle drift, and planted unsprung tires.</figcaption></figure>
       </div>
     </article>
     </section>
